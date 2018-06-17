@@ -1,0 +1,10 @@
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\bin\Debug\DTO.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\bin\Debug\DTO.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\obj\Debug\DTO.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\obj\Debug\DTO.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\bin\Debug\DTO.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\bin\Debug\DTO.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\obj\Debug\DTO.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DTO\obj\Debug\DTO.pdb

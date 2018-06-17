@@ -1,0 +1,18 @@
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\BUS.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\BUS.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\DAO.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\DAO.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\obj\Debug\BUS.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\obj\Debug\BUS.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\DTO.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\DTO.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\BUS.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\BUS.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\DAO.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\DTO.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\DAO.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\bin\Debug\DTO.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\obj\Debug\BUS.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\BUS\obj\Debug\BUS.pdb

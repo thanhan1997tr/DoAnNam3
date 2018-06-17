@@ -1,0 +1,35 @@
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\GiaoDien.exe.config
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\GiaoDien.exe
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\GiaoDien.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.csprojResolveAssemblyReference.cache
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmDangNhap.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.Properties.Resources.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.csproj.GenerateResource.Cache
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.exe
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\BUS.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\Common.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\DAO.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\BUS.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\Common.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\DAO.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmManager.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\GiaoDien.exe.config
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.exe
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\GiaoDien.exe
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\GiaoDien.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\BUS.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\Common.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\DAO.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\BUS.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\Common.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\DAO.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.csprojResolveAssemblyReference.cache
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmDangNhap.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmManager.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.Properties.Resources.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.csproj.GenerateResource.Cache
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\DTO.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\DTO.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmChiTietBan.resources
