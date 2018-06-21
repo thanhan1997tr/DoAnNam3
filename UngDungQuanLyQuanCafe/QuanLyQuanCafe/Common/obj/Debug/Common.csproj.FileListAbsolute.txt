@@ -8,3 +8,13 @@ C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQua
 C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\obj\Debug\Common.dll
 C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\obj\Debug\Common.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\bin\Debug\Common.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\bin\Debug\Common.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\obj\Debug\Common.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\obj\Debug\Common.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\bin\Debug\Common.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\bin\Debug\Common.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\obj\Debug\Common.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\Common\obj\Debug\Common.pdb

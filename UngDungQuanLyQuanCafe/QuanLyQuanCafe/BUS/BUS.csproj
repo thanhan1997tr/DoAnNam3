@@ -43,12 +43,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DangNhapBUS.cs" />
+    <Compile Include="HoaDonChiTietBUS.cs" />
     <Compile Include="HoaDonThanhToanBUS.cs" />
+    <Compile Include="HoaDonTheoNgayBUS.cs" />
+    <Compile Include="NhanVienBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableBUS.cs" />
     <Compile Include="TaiKhoanBUS.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{e33b77c1-6b0c-4ec3-bec8-d25b9d3f926d}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{ae1ea24b-3c3e-4201-9799-b9fb60722962}</Project>
       <Name>DAO</Name>

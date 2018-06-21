@@ -50,6 +50,17 @@ namespace DAO
             return tablelist;
         }
 
+        public void ThemBan()
+        {
+            string sql = "SP_TABLE_THEM";
+            DataProvider.Instance.ExecuteNonQuery(sql);
+        }
+
+        public int XoaBan()
+        {
+            string sql = "SP_TABLE_XOA";
+            return DataProvider.Instance.ExecuteNonQuery(sql);
+        }
         //public void SwitchTable(string id1, string id2, string mahoadon, string manv)
         //{
         //    string query = "SP_SwitchTabel @idTable1 , @idTable2 , @mahoadon , @manv";

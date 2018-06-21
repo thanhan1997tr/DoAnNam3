@@ -61,9 +61,11 @@ namespace GiaoDien
 
         private void btn_Click(object sender, EventArgs e)
         {
-            getMaBan.sMaBan = ((sender as Button).Tag as TableDTO).SMaBan;
+            getBan.sMaBan = ((sender as Button).Tag as TableDTO).SMaBan;
+            getBan.sTrangThai = ((sender as Button).Tag as TableDTO).STrangThai;
 
             fmChiTietBan f = new fmChiTietBan();
+            f.UpdatefmManager = new fmChiTietBan.Update(LoadTable);
             f.Text = ((sender as Button).Tag as TableDTO).STenBan;
             f.ShowDialog();
             this.Show();
@@ -86,14 +88,40 @@ namespace GiaoDien
 
         public void LoadComBoBoxTable()
         {
-            cbbTable.DisplayMember = "TENBAN";
-            cbbTable.ValueMember = "MABAN";
-            cbbTable.DataSource = TableDAO.Instance.Load_ComboboxTable();
+            cbbTable1.DisplayMember = "TENBAN";
+            cbbTable1.ValueMember = "MABAN";
+            cbbTable1.DataSource = TableDAO.Instance.Load_ComboboxTable();
         }
 
-        public class getMaBan
+        public class getBan
         {
             static public string sMaBan;
+            static public string sTrangThai;
+        }
+
+        private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fmNhanVien f = new fmNhanVien();
+            f.Show();
+        }
+
+        private void btnQuanLyBan_Click(object sender, EventArgs e)
+        {
+            fmQuanLyBan f = new fmQuanLyBan();
+            f.UpdatefmManager = new fmQuanLyBan.Update(LoadTable); // Update table khi thêm table
+            f.ShowDialog();
+        }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fmThongTinTaiKhoan f = new fmThongTinTaiKhoan();
+            f.Show();
+        }
+
+        private void xemHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fmHoaDonTheoNgay f = new fmHoaDonTheoNgay();
+            f.Show();
         }
     }
 }

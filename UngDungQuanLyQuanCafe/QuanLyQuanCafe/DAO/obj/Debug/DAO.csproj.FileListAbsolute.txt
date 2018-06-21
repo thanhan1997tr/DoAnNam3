@@ -12,3 +12,17 @@ C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQua
 C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\obj\Debug\DAO.dll
 C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\obj\Debug\DAO.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\bin\Debug\DAO.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\bin\Debug\DAO.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\bin\Debug\DTO.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\bin\Debug\DTO.pdb
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\obj\Debug\DAO.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\obj\Debug\DAO.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\bin\Debug\DAO.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\bin\Debug\DAO.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\bin\Debug\DTO.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\bin\Debug\DTO.pdb
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\obj\Debug\DAO.dll
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\DAO\obj\Debug\DAO.pdb

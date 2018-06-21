@@ -38,7 +38,7 @@ namespace DAO
             {
                 string tensp = items["TENSP"].ToString();
                 int soluong = (int)items["SOLUONG"];
-                float dongia = (float)Convert.ToDouble(items["DONGIABAN"]);
+                float dongia = (float)Convert.ToDouble(items["DONGIABAN"]);     
                 float thanhtien = (float)Convert.ToDouble(items["THANHTIEN"]);
                 string ngaynhap = items["NGAYNHAP"].ToString();
                 string tennv = items["TENNV"].ToString();
@@ -48,6 +48,12 @@ namespace DAO
                 hdlist.Add(hdnew);
             }
             return hdlist;
+        }
+
+        public void ThanhToan(string MaHD, float thanhtoan)
+        {
+            string sql = "SP_THANHTOANHOADON @MAHOADON , @THANHTOAN";
+            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { MaHD, thanhtoan });
         }
     }
 }

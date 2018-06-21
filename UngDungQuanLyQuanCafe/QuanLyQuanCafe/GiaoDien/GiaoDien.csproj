@@ -59,11 +59,41 @@
     <Compile Include="fmDangNhap.Designer.cs">
       <DependentUpon>fmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmHoaDonChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmHoaDonChiTiet.Designer.cs">
+      <DependentUpon>fmHoaDonChiTiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fmManager.Designer.cs">
       <DependentUpon>fmManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmNhanVien.Designer.cs">
+      <DependentUpon>fmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmQuanLyBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmQuanLyBan.Designer.cs">
+      <DependentUpon>fmQuanLyBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>fmThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmHoaDonTheoNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmHoaDonTheoNgay.Designer.cs">
+      <DependentUpon>fmHoaDonTheoNgay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +103,23 @@
     <EmbeddedResource Include="fmDangNhap.resx">
       <DependentUpon>fmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fmHoaDonChiTiet.resx">
+      <DependentUpon>fmHoaDonChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmManager.resx">
       <DependentUpon>fmManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmNhanVien.resx">
+      <DependentUpon>fmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmQuanLyBan.resx">
+      <DependentUpon>fmQuanLyBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmThongTinTaiKhoan.resx">
+      <DependentUpon>fmThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmHoaDonTheoNgay.resx">
+      <DependentUpon>fmHoaDonTheoNgay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

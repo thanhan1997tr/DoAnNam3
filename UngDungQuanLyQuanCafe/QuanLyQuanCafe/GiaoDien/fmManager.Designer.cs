@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.danhSáchNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,9 +45,10 @@
             this.doanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flplisttable = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbTable2 = new System.Windows.Forms.ComboBox();
             this.btnQuanLyBan = new System.Windows.Forms.Button();
             this.btnGopBan = new System.Windows.Forms.Button();
-            this.cbbTable = new System.Windows.Forms.ComboBox();
+            this.cbbTable1 = new System.Windows.Forms.ComboBox();
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -83,15 +85,25 @@
             // 
             // adminToolStripMenuItem
             // 
+            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.danhSáchNhânViênToolStripMenuItem});
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.adminToolStripMenuItem.Text = "Admin";
+            // 
+            // danhSáchNhânViênToolStripMenuItem
+            // 
+            this.danhSáchNhânViênToolStripMenuItem.Name = "danhSáchNhânViênToolStripMenuItem";
+            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.danhSáchNhânViênToolStripMenuItem.Text = "Danh sách nhân viên";
+            this.danhSáchNhânViênToolStripMenuItem.Click += new System.EventHandler(this.danhSáchNhânViênToolStripMenuItem_Click);
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
             this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
+            this.thôngTinTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -110,8 +122,9 @@
             // xemHóaĐơnToolStripMenuItem
             // 
             this.xemHóaĐơnToolStripMenuItem.Name = "xemHóaĐơnToolStripMenuItem";
-            this.xemHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.xemHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.xemHóaĐơnToolStripMenuItem.Text = "Xem hóa đơn";
+            this.xemHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.xemHóaĐơnToolStripMenuItem_Click);
             // 
             // khoHàngToolStripMenuItem
             // 
@@ -169,14 +182,24 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.cbbTable2);
             this.panel1.Controls.Add(this.btnQuanLyBan);
             this.panel1.Controls.Add(this.btnGopBan);
-            this.panel1.Controls.Add(this.cbbTable);
+            this.panel1.Controls.Add(this.cbbTable1);
             this.panel1.Controls.Add(this.btnChuyenBan);
             this.panel1.Location = new System.Drawing.Point(765, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 132);
             this.panel1.TabIndex = 34;
+            // 
+            // cbbTable2
+            // 
+            this.cbbTable2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbTable2.FormattingEnabled = true;
+            this.cbbTable2.Location = new System.Drawing.Point(129, 59);
+            this.cbbTable2.Name = "cbbTable2";
+            this.cbbTable2.Size = new System.Drawing.Size(112, 28);
+            this.cbbTable2.TabIndex = 35;
             // 
             // btnQuanLyBan
             // 
@@ -189,6 +212,7 @@
             this.btnQuanLyBan.TabIndex = 35;
             this.btnQuanLyBan.Text = "Quản lý bàn";
             this.btnQuanLyBan.UseVisualStyleBackColor = false;
+            this.btnQuanLyBan.Click += new System.EventHandler(this.btnQuanLyBan_Click);
             // 
             // btnGopBan
             // 
@@ -200,14 +224,14 @@
             this.btnGopBan.Text = "Gộp Bàn";
             this.btnGopBan.UseVisualStyleBackColor = true;
             // 
-            // cbbTable
+            // cbbTable1
             // 
-            this.cbbTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbbTable.FormattingEnabled = true;
-            this.cbbTable.Location = new System.Drawing.Point(11, 59);
-            this.cbbTable.Name = "cbbTable";
-            this.cbbTable.Size = new System.Drawing.Size(230, 28);
-            this.cbbTable.TabIndex = 14;
+            this.cbbTable1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbTable1.FormattingEnabled = true;
+            this.cbbTable1.Location = new System.Drawing.Point(11, 59);
+            this.cbbTable1.Name = "cbbTable1";
+            this.cbbTable1.Size = new System.Drawing.Size(112, 28);
+            this.cbbTable1.TabIndex = 14;
             // 
             // btnChuyenBan
             // 
@@ -313,7 +337,7 @@
         private System.Windows.Forms.FlowLayoutPanel flplisttable;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnGopBan;
-        private System.Windows.Forms.ComboBox cbbTable;
+        private System.Windows.Forms.ComboBox cbbTable1;
         private System.Windows.Forms.Button btnChuyenBan;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label3;
@@ -321,5 +345,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnQuanLyBan;
+        private System.Windows.Forms.ComboBox cbbTable2;
+        private System.Windows.Forms.ToolStripMenuItem danhSáchNhânViênToolStripMenuItem;
     }
 }

@@ -11,7 +11,7 @@ namespace DAO
     public class DataProvider
     {
         public string conString = "Data Source=DESKTOP-6VGHVNB;Initial Catalog=QuanLyQuanCf;Persist Security Info=True;User ID=sa;Password=12345";
-
+      //  public string conString = "Data Source=DESKTOP-JH25FD7;Initial Catalog=QuanLyQuanCf;Integrated Security=True"; //Thương
         private static DataProvider instance;
 
         public static DataProvider Instance

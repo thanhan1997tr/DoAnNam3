@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmChiTietBan));
             this.panel = new System.Windows.Forms.Panel();
+            this.btnBotMon = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.nbrVAT = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
@@ -65,6 +66,7 @@
             // panel
             // 
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.Controls.Add(this.btnBotMon);
             this.panel.Controls.Add(this.btnThanhToan);
             this.panel.Controls.Add(this.nbrVAT);
             this.panel.Controls.Add(this.label11);
@@ -83,6 +85,17 @@
             this.panel.Size = new System.Drawing.Size(273, 345);
             this.panel.TabIndex = 32;
             // 
+            // btnBotMon
+            // 
+            this.btnBotMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBotMon.Location = new System.Drawing.Point(144, 179);
+            this.btnBotMon.Name = "btnBotMon";
+            this.btnBotMon.Size = new System.Drawing.Size(118, 41);
+            this.btnBotMon.TabIndex = 33;
+            this.btnBotMon.Text = "Bớt món";
+            this.btnBotMon.UseVisualStyleBackColor = true;
+            this.btnBotMon.Click += new System.EventHandler(this.btnBotMon_Click);
+            // 
             // btnThanhToan
             // 
             this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -92,6 +105,7 @@
             this.btnThanhToan.TabIndex = 32;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // nbrVAT
             // 
@@ -185,10 +199,11 @@
             this.btnThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThemMon.Location = new System.Drawing.Point(6, 179);
             this.btnThemMon.Name = "btnThemMon";
-            this.btnThemMon.Size = new System.Drawing.Size(264, 41);
+            this.btnThemMon.Size = new System.Drawing.Size(118, 41);
             this.btnThemMon.TabIndex = 22;
-            this.btnThemMon.Text = "Thêm/Bớt Món";
+            this.btnThemMon.Text = "Thêm Món";
             this.btnThemMon.UseVisualStyleBackColor = true;
+            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click);
             // 
             // txtTongTien
             // 
@@ -366,5 +381,6 @@
         private System.Windows.Forms.NumericUpDown nbrGiamGia;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnBotMon;
     }
 }

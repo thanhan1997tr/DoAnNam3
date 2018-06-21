@@ -19,11 +19,16 @@ namespace GiaoDien
             InitializeComponent();
         }
 
+        public static class getTaiKhoan
+        {
+            static public string taiKhoan;
+        }
+
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            string tk = txtUser.Text;
+            getTaiKhoan.taiKhoan = txtUser.Text;
             string mk = MaHoaMD5.ToMD5(txtPwd.Text);
-            if (DangNhapBUS.Instance.DangNhap(tk, mk))
+            if (DangNhapBUS.Instance.DangNhap(getTaiKhoan.taiKhoan, mk))
             {
                 fmManager f = new fmManager();
                 this.Hide();

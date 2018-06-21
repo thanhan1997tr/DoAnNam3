@@ -1,8 +1,11 @@
-﻿using System;
+﻿using DAO;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -26,5 +29,28 @@ namespace BUS
         }
 
         private TableBUS() { }
+
+        public void LoadTable(ListView lv)
+        {
+            lv.Items.Clear();
+            foreach (TableDTO l in TableDAO.Instance.Load_Table())
+            {
+                ListViewItem items = new ListViewItem();
+                items.Text = l.SMaBan;
+                items.SubItems.Add(l.STenBan);
+                items.SubItems.Add(l.STrangThai);
+                lv.Items.Add(items);
+            }
+        }
+
+        public void ThemBan()
+        {
+            TableDAO.Instance.ThemBan();
+        }
+
+        public int XoaBan()
+        {
+            return TableDAO.Instance.XoaBan();
+        }
     }
 }
