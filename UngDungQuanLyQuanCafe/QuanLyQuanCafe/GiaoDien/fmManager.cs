@@ -1,4 +1,5 @@
-﻿using DAO;
+﻿using BUS;
+using DAO;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,8 @@ namespace GiaoDien
         private void fmManager_Load(object sender, EventArgs e)
         {
             LoadTable();
-            LoadComBoBoxTable();
+            LoadComBoBoxTable1();
+            LoadComBoBoxTable2();
         }
 
         public void LoadTable()
@@ -48,16 +50,6 @@ namespace GiaoDien
                 flplisttable.Controls.Add(btn);
             }
         }
-
-        //private void btn_DoubleClick(object sender, EventArgs e)
-        //{
-        //    getMaBan.sMaBan = ((sender as Button).Tag as TableDTO).SMaBan;
-
-        //    fmChiTietBan f = new fmChiTietBan();
-        //    f.Text = ((sender as Button).Tag as TableDTO).STenBan;
-        //    f.ShowDialog();
-        //    this.Show();
-        //}
 
         private void btn_Click(object sender, EventArgs e)
         {
@@ -86,11 +78,17 @@ namespace GiaoDien
             //throw new NotImplementedException();
         }
 
-        public void LoadComBoBoxTable()
+        public void LoadComBoBoxTable1()
         {
             cbbTable1.DisplayMember = "TENBAN";
             cbbTable1.ValueMember = "MABAN";
             cbbTable1.DataSource = TableDAO.Instance.Load_ComboboxTable();
+        }
+        public void LoadComBoBoxTable2()
+        {
+            cbbTable2.DisplayMember = "TENBAN";
+            cbbTable2.ValueMember = "MABAN";
+            cbbTable2.DataSource = TableDAO.Instance.Load_ComboboxTable();
         }
 
         public class getBan
@@ -122,6 +120,30 @@ namespace GiaoDien
         {
             fmHoaDonTheoNgay f = new fmHoaDonTheoNgay();
             f.Show();
+        }
+
+        private void btnChuyenBan_Click(object sender, EventArgs e)
+        {
+            string MaHDNew = HoaDonTheoNgayBUS.Instance.getMaHDMoi();
+            string tb1 = cbbTable1.SelectedValue.ToString();
+            string tb2 = cbbTable2.SelectedValue.ToString();
+            if (MessageBox.Show("Bạn muốn chuyển bàn " + cbbTable1.Text + " qua bàn " + cbbTable2.Text + "", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                TableDAO.Instance.ChuyenBan(tb1, tb2, MaHDNew, fmDangNhap.getTaiKhoan.taiKhoan);
+                LoadTable();
+            }
+        }
+
+        private void btnGopBan_Click(object sender, EventArgs e)
+        {
+            string MaHDNew = HoaDonTheoNgayBUS.Instance.getMaHDMoi();
+            string tb1 = cbbTable1.SelectedValue.ToString();
+            string tb2 = cbbTable2.SelectedValue.ToString();
+            if (MessageBox.Show("Bạn muốn chuyển bàn " + cbbTable1.Text + " qua bàn " + cbbTable2.Text + "", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                TableDAO.Instance.GopBan(tb1, tb2);
+                LoadTable();
+            }
         }
     }
 }

@@ -52,6 +52,9 @@
             this.btnSuaNv = new System.Windows.Forms.Button();
             this.rbtnNu = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnLamMoiForm = new System.Windows.Forms.Button();
+            this.txtManv = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDatLaiMk = new System.Windows.Forms.Button();
             this.rbtnNam = new System.Windows.Forms.RadioButton();
@@ -67,14 +70,11 @@
             this.txtLuongnv = new System.Windows.Forms.TextBox();
             this.txtDiaChinv = new System.Windows.Forms.TextBox();
             this.txtTennv = new System.Windows.Forms.TextBox();
-            this.txtManv = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnLamMoiForm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnXoaNv
@@ -310,6 +310,33 @@
             this.panel2.Size = new System.Drawing.Size(1129, 427);
             this.panel2.TabIndex = 3;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnLamMoiForm);
+            this.panel4.Controls.Add(this.txtManv);
+            this.panel4.Location = new System.Drawing.Point(73, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(249, 37);
+            this.panel4.TabIndex = 23;
+            // 
+            // btnLamMoiForm
+            // 
+            this.btnLamMoiForm.Location = new System.Drawing.Point(168, 7);
+            this.btnLamMoiForm.Name = "btnLamMoiForm";
+            this.btnLamMoiForm.Size = new System.Drawing.Size(75, 23);
+            this.btnLamMoiForm.TabIndex = 21;
+            this.btnLamMoiForm.Text = "Làm mới";
+            this.btnLamMoiForm.UseVisualStyleBackColor = true;
+            this.btnLamMoiForm.Click += new System.EventHandler(this.btnLamMoiForm_Click);
+            // 
+            // txtManv
+            // 
+            this.txtManv.Location = new System.Drawing.Point(8, 9);
+            this.txtManv.Name = "txtManv";
+            this.txtManv.ReadOnly = true;
+            this.txtManv.Size = new System.Drawing.Size(157, 20);
+            this.txtManv.TabIndex = 6;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txtMatKhau);
@@ -448,33 +475,6 @@
             this.txtTennv.Size = new System.Drawing.Size(157, 20);
             this.txtTennv.TabIndex = 7;
             // 
-            // txtManv
-            // 
-            this.txtManv.Location = new System.Drawing.Point(8, 9);
-            this.txtManv.Name = "txtManv";
-            this.txtManv.ReadOnly = true;
-            this.txtManv.Size = new System.Drawing.Size(157, 20);
-            this.txtManv.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnLamMoiForm);
-            this.panel4.Controls.Add(this.txtManv);
-            this.panel4.Location = new System.Drawing.Point(73, 5);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(249, 37);
-            this.panel4.TabIndex = 23;
-            // 
-            // btnLamMoiForm
-            // 
-            this.btnLamMoiForm.Location = new System.Drawing.Point(168, 7);
-            this.btnLamMoiForm.Name = "btnLamMoiForm";
-            this.btnLamMoiForm.Size = new System.Drawing.Size(75, 23);
-            this.btnLamMoiForm.TabIndex = 21;
-            this.btnLamMoiForm.Text = "Làm mới";
-            this.btnLamMoiForm.UseVisualStyleBackColor = true;
-            this.btnLamMoiForm.Click += new System.EventHandler(this.btnLamMoiForm_Click);
-            // 
             // fmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,15 +486,16 @@
             this.Name = "fmNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Nhân Viên";
+            this.Load += new System.EventHandler(this.fmNhanVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

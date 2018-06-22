@@ -271,5 +271,10 @@ namespace GiaoDien
             }
         }
         #endregion
+
+        private void fmNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

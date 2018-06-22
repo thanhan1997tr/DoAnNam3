@@ -20,10 +20,10 @@ namespace GiaoDien
         public fmChiTietBan()
         {
             InitializeComponent();
+            LoadComboboxSanPham();
             if (fmManager.getBan.sTrangThai.Equals("CÓ"))
             {
                 LoadHoaDonThanhToan();
-                LoadComboboxSanPham();
             }
         }
 

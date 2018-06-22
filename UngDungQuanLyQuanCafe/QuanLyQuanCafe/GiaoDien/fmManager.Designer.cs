@@ -122,7 +122,7 @@
             // xemHóaĐơnToolStripMenuItem
             // 
             this.xemHóaĐơnToolStripMenuItem.Name = "xemHóaĐơnToolStripMenuItem";
-            this.xemHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xemHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.xemHóaĐơnToolStripMenuItem.Text = "Xem hóa đơn";
             this.xemHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.xemHóaĐơnToolStripMenuItem_Click);
             // 
@@ -223,6 +223,7 @@
             this.btnGopBan.TabIndex = 16;
             this.btnGopBan.Text = "Gộp Bàn";
             this.btnGopBan.UseVisualStyleBackColor = true;
+            this.btnGopBan.Click += new System.EventHandler(this.btnGopBan_Click);
             // 
             // cbbTable1
             // 
@@ -242,6 +243,7 @@
             this.btnChuyenBan.TabIndex = 15;
             this.btnChuyenBan.Text = "Chuyển Bàn";
             this.btnChuyenBan.UseVisualStyleBackColor = true;
+            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
             // 
             // panel7
             // 

@@ -61,10 +61,15 @@ namespace DAO
             string sql = "SP_TABLE_XOA";
             return DataProvider.Instance.ExecuteNonQuery(sql);
         }
-        //public void SwitchTable(string id1, string id2, string mahoadon, string manv)
-        //{
-        //    string query = "SP_SwitchTabel @idTable1 , @idTable2 , @mahoadon , @manv";
-        //    DataProvider.Instance.ExecuteNonQuery(query, new object[] { id1, id2, mahoadon, manv });
-        //}
+        public void ChuyenBan(string tb1, string tb2, string mahoadon, string manv)
+        {
+            string query = "SP_CHUYENBAN @idTable1 , @idTable2 , @mahoadon , @manv";
+            DataProvider.Instance.ExecuteNonQuery(query, new object[] { tb1, tb2, mahoadon, manv });
+        }
+        public void GopBan(string tb1, string tb2)
+        {
+            string query = "SP_GOPBAN @idTable1 , @idTable2";
+            DataProvider.Instance.ExecuteNonQuery(query, new object[] { tb1, tb2 });
+        }
     }
 }

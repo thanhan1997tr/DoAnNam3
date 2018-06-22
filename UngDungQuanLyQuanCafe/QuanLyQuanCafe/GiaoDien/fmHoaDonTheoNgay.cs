@@ -48,5 +48,10 @@ namespace GiaoDien
             HDCT.Text = MaHD;
             HDCT.Show();
         }
+
+        private void fmHoaDonTheoNgay_Load(object sender, EventArgs e)
+        {
+                
+        }
     }
 }

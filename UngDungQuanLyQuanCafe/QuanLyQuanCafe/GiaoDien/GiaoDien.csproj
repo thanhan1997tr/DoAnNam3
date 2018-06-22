@@ -83,6 +83,12 @@
     <Compile Include="fmQuanLyBan.Designer.cs">
       <DependentUpon>fmQuanLyBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmSanPham.Designer.cs">
+      <DependentUpon>fmSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmThongTinTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     </Compile>
     <Compile Include="fmHoaDonTheoNgay.Designer.cs">
       <DependentUpon>fmHoaDonTheoNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoanhThu.Designer.cs">
+      <DependentUpon>frmDoanhThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,11 +127,17 @@
     <EmbeddedResource Include="fmQuanLyBan.resx">
       <DependentUpon>fmQuanLyBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fmSanPham.resx">
+      <DependentUpon>fmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmThongTinTaiKhoan.resx">
       <DependentUpon>fmThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmHoaDonTheoNgay.resx">
       <DependentUpon>fmHoaDonTheoNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoanhThu.resx">
+      <DependentUpon>frmDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

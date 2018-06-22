@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="DangNhapDAO.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DoanhThuDAO.cs" />
     <Compile Include="HoaDonChiTietDAO.cs" />
     <Compile Include="HoaDonThanhToanDAO.cs" />
     <Compile Include="HoaDonTheoNgayDAO.cs" />
+    <Compile Include="NhaCungCapDAO.cs" />
     <Compile Include="NhanVienDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPhamDAO.cs" />

@@ -178,6 +178,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fmHoaDonTheoNgay";
             this.Text = "Thống kê hóa đơn theo ngày";
+            this.Load += new System.EventHandler(this.fmHoaDonTheoNgay_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
