@@ -145,5 +145,17 @@ namespace GiaoDien
                 LoadTable();
             }
         }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fmSanPham f = new fmSanPham();
+            f.Show();
+        }
+
+        private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fmDoanhThu f = new fmDoanhThu();
+            f.Show();
+        }
     }
 }

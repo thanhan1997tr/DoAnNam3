@@ -24,6 +24,11 @@ namespace GiaoDien
             static public string taiKhoan;
         }
 
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             getTaiKhoan.taiKhoan = txtUser.Text;
@@ -39,6 +44,16 @@ namespace GiaoDien
             {
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void pbClose_MouseHover(object sender, EventArgs e)
+        {
+            pbClose.Image = Properties.Resources.CloseRed;
+        }
+
+        private void pbClose_MouseLeave(object sender, EventArgs e)
+        {
+            pbClose.Image = Properties.Resources.CloseWhite;
         }
     }
 }

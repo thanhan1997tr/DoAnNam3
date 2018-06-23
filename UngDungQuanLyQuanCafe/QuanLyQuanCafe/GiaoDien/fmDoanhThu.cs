@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GiaoDien
 {
-    public partial class frmDoanhThu : Form
+    public partial class fmDoanhThu : Form
     {
-        public frmDoanhThu()
+        public fmDoanhThu()
         {
             InitializeComponent();
             loadDoanhThu();
@@ -31,14 +33,18 @@ namespace GiaoDien
 
         private void loadDoanhThu()
         {
-            txtTongTien_dt.Text = DoanhThuBUS.Instance.load(lvDoanhThu).ToString();
+            CultureInfo culture = new CultureInfo("vi-VN");
+            Thread.CurrentThread.CurrentCulture = culture;
+            txtTongTien_dt.Text = DoanhThuBUS.Instance.load(lvDoanhThu).ToString("c", culture);
         }
 
         private void loadDoanhThuTheoNgay()
         {
             string ngayBD = dtimeTuNgay_dt.Value.ToString("MM/dd/yyyy");
             string ngayKT = dtimeDenNgay_dt.Value.ToString("MM/dd/yyyy");
-            txtTongTien_dt.Text = DoanhThuBUS.Instance.loadTheoNgay(lvDoanhThu, ngayBD, ngayKT).ToString();
+            CultureInfo culture = new CultureInfo("vi-VN");
+            Thread.CurrentThread.CurrentCulture = culture;
+            txtTongTien_dt.Text = DoanhThuBUS.Instance.loadTheoNgay(lvDoanhThu, ngayBD, ngayKT).ToString("c", culture);
         }
 
         private void btnTra_dt_Click(object sender, EventArgs e)

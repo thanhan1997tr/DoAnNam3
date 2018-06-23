@@ -36,7 +36,15 @@ namespace BUS
             foreach (HoaDonChiTietDTO l in hdlist)
             {
                 ListViewItem items = new ListViewItem();
-                items.Text = l.SMaSanPham;
+                if (l.SMaSanPham == null)
+                {
+                    items.Text = "Đã xóa";
+                }
+                else
+                {
+                    items.Text = l.SMaSanPham;
+                }
+                
                 items.SubItems.Add(l.STenSanPham);
                 items.SubItems.Add(l.ISoLuong.ToString());
                 items.SubItems.Add(l.SDonGia);

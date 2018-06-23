@@ -1,6 +1,6 @@
 ﻿namespace GiaoDien
 {
-    partial class frmDoanhThu
+    partial class fmDoanhThu
     {
         /// <summary>
         /// Required designer variable.
