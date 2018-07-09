@@ -50,10 +50,16 @@ namespace DAO
             return hdlist;
         }
 
-        public void ThanhToan(string MaHD, float thanhtoan)
+        public void ThanhToan(string MaHD, float thanhtoan, float giamgia, float vat)
         {
-            string sql = "SP_THANHTOANHOADON @MAHOADON , @THANHTOAN";
-            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { MaHD, thanhtoan });
+            string sql = "SP_THANHTOANHOADON @MAHOADON , @THANHTOAN , @GIAMGIA , @VAT";
+            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { MaHD, thanhtoan, giamgia, vat });
+        }
+
+        public void UpdateGiamGia_VAT(string MaHD, float giamgia, float vat)
+        {
+            string sql = "SP_GIAMGIA_VAT @MAHOADON , @GIAMGIA , @VAT";
+            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { MaHD, giamgia, vat });
         }
     }
 }

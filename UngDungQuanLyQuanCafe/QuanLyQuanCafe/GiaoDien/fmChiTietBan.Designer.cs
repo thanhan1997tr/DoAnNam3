@@ -342,6 +342,7 @@
             this.MinimizeBox = false;
             this.Name = "fmChiTietBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fmChiTietBan_FormClosing);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbrVAT)).EndInit();

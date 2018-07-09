@@ -85,3 +85,4 @@ C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDung
 C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmSanPham.resources
 H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmSanPham.resources
 H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmDoanhThu.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmChamCong.resources

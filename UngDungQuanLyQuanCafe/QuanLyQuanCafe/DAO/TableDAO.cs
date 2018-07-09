@@ -63,13 +63,24 @@ namespace DAO
         }
         public void ChuyenBan(string tb1, string tb2, string mahoadon, string manv)
         {
-            string query = "SP_CHUYENBAN @idTable1 , @idTable2 , @mahoadon , @manv";
-            DataProvider.Instance.ExecuteNonQuery(query, new object[] { tb1, tb2, mahoadon, manv });
+            string sql = "SP_CHUYENBAN @idTable1 , @idTable2 , @mahoadon , @manv";
+            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { tb1, tb2, mahoadon, manv });
         }
         public void GopBan(string tb1, string tb2)
         {
-            string query = "SP_GOPBAN @idTable1 , @idTable2";
-            DataProvider.Instance.ExecuteNonQuery(query, new object[] { tb1, tb2 });
+            string sql = "SP_GOPBAN @idTable1 , @idTable2";
+            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { tb1, tb2 });
+        }
+        public String getTrangThai(string tb)
+        {
+            string trangthai = "";
+            string sql = "SELECT * FROM BAN WHERE MABAN = " + "'" + tb + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(sql);
+            foreach (DataRow items in data.Rows)
+            {
+                trangthai = items["TRANGTHAI"].ToString();
+            }
+            return trangthai;
         }
     }
 }

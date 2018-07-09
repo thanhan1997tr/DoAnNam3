@@ -62,12 +62,28 @@ namespace GiaoDien
 
         private void nbrGiamGia_ValueChanged(object sender, EventArgs e)
         {
-            ShowTongTien();
+            string MaBan = fmManager.getBan.sMaBan;
+            string KtraMaHD = HoaDonTheoNgayDAO.Instance.getIDTheoHoaDon(MaBan);
+            float GiamGia = ((float)nbrGiamGia.Value) / 100;
+            float Vat = ((float)nbrVAT.Value) / 100;
+            if (!KtraMaHD.Equals("NO"))
+            {
+                HoaDonThanhToanDAO.Instance.UpdateGiamGia_VAT(KtraMaHD, GiamGia, Vat);
+                ShowTongTien();
+            }
         }
 
         private void nbrVAT_ValueChanged(object sender, EventArgs e)
         {
-            ShowTongTien();
+            string MaBan = fmManager.getBan.sMaBan;
+            string KtraMaHD = HoaDonTheoNgayDAO.Instance.getIDTheoHoaDon(MaBan);
+            float GiamGia = ((float)nbrGiamGia.Value) / 100;
+            float Vat = ((float)nbrVAT.Value) / 100;
+            if (!KtraMaHD.Equals("NO"))
+            {
+                HoaDonThanhToanDAO.Instance.UpdateGiamGia_VAT(KtraMaHD, GiamGia, Vat);
+                ShowTongTien();
+            }
         }
 
         #region THÊM BỚT MÓN
@@ -93,24 +109,35 @@ namespace GiaoDien
                     string MaNv = fmDangNhap.getTaiKhoan.taiKhoan;
                     float GiamGia = ((float)nbrGiamGia.Value) / 100;
                     float Vat = ((float)nbrVAT.Value) / 100;
-                    if (GiamGia == 0 || Vat == 0)
+                    if (soluong > 0)
                     {
-                        if (MessageBox.Show("Có thêm GIẢM GIÁ hoặc VAT hay không?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel)
-                        {
-                            HoaDonTheoNgayDTO hd = new HoaDonTheoNgayDTO(MaHDNew, "", "", MaNv, MaBan, GiamGia, Vat, 0, "");
-                            HoaDonTheoNgayDAO.Instance.ThemHoaDon(hd);
-                            HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(MaHDNew, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
-                        }
+                        HoaDonTheoNgayDTO hd = new HoaDonTheoNgayDTO(MaHDNew, "", "", MaNv, MaBan, GiamGia, Vat, 0, "");
+                        HoaDonTheoNgayDAO.Instance.ThemHoaDon(hd);
+                        HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(MaHDNew, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
+                        //Load lại danh sách sản phẩm trong hóa đơn
+                        HoaDonThanhToanBUS.Instance.LoadHoaDonMenu(lvHoaDon, MaBan, lbnhanvien, lbtime, txtTongTien, nbrGiamGia, nbrVAT);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chưa nhập số lượng", "Thông báo");
                     }
                 }
                 else
                 {
-                    //Nếu mã hóa đơn đã có và chưa thanh toán thì thêm món mới vào hóa đơn chi tiết của hóa đơn đó
-                    HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(KtraMaHD, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
+                    if (soluong > 0)
+                    {
+                        //Nếu mã hóa đơn đã có và chưa thanh toán thì thêm món mới vào hóa đơn chi tiết của hóa đơn đó
+                        HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(KtraMaHD, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
+                        //Load lại danh sách sản phẩm trong hóa đơn
+                        HoaDonThanhToanBUS.Instance.LoadHoaDonMenu(lvHoaDon, MaBan, lbnhanvien, lbtime, txtTongTien, nbrGiamGia, nbrVAT);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chưa nhập số lượng", "Thông báo");
+                    }
+
                 }
-                //Load lại danh sách sản phẩm trong hóa đơn
-                HoaDonThanhToanBUS.Instance.LoadHoaDonMenu(lvHoaDon, MaBan, lbnhanvien, lbtime, txtTongTien, nbrGiamGia, nbrVAT);
-                UpdatefmManager();
+
             }
             else
             {
@@ -127,11 +154,14 @@ namespace GiaoDien
                 if (SanPhamDAO.Instance.KiemTraTenSP(cbbThemMon_Manager.Text))
                 {
                     int soluong = (int)nbrSoLuong_Manager.Value;
+                    bool ktrasp = false;
                     foreach (ListViewItem lvitem in lvHoaDon.Items)
                     {
                         if (cbbThemMon_Manager.Text == lvitem.SubItems[0].Text)
                         {
                             soluong = Convert.ToInt32(lvitem.SubItems[1].Text) - soluong;
+                            ktrasp = true;
+                            break;
                         }
                     }
                     if (soluong < 0)
@@ -140,9 +170,16 @@ namespace GiaoDien
                     }
                     else
                     {
-                        HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(KtraMaHD, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
+                        if (ktrasp)
+                        {
+                            HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(KtraMaHD, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
+                            HoaDonThanhToanBUS.Instance.LoadHoaDonMenu(lvHoaDon, MaBan, lbnhanvien, lbtime, txtTongTien, nbrGiamGia, nbrVAT);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sản phẩm không có trong danh sách.", "Thông báo.");
+                        }
                     }
-                    HoaDonThanhToanBUS.Instance.LoadHoaDonMenu(lvHoaDon, MaBan, lbnhanvien, lbtime, txtTongTien, nbrGiamGia, nbrVAT);
                 }
                 else
                 {
@@ -161,9 +198,10 @@ namespace GiaoDien
             {
                 if (MessageBox.Show("Bạn có chắc thanh toán", "Thông Báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    float TongTien = HoaDonThanhToanBUS.getTongTien.TongTien - (HoaDonThanhToanBUS.getTongTien.TongTien * (float)Convert.ToDouble(nbrGiamGia.Value)) / 100 + (HoaDonThanhToanBUS.getTongTien.TongTien * (float)Convert.ToDouble(nbrVAT.Value)) / 100;
-                    HoaDonThanhToanDAO.Instance.ThanhToan(KtraMaHD, TongTien);
-                    UpdatefmManager();
+                    float GiamGia = (float)Convert.ToDouble(nbrGiamGia.Value) / 100;
+                    float Vat = (float)Convert.ToDouble(nbrVAT.Value) / 100;
+                    float TongTien = HoaDonThanhToanBUS.getTongTien.TongTien - (HoaDonThanhToanBUS.getTongTien.TongTien * GiamGia) + (HoaDonThanhToanBUS.getTongTien.TongTien * Vat);
+                    HoaDonThanhToanDAO.Instance.ThanhToan(KtraMaHD, TongTien, GiamGia, Vat);
                     fmHoaDonChiTiet fm = new fmHoaDonChiTiet(KtraMaHD);
                     fm.Text = KtraMaHD;
                     fm.ShowDialog();
@@ -175,9 +213,14 @@ namespace GiaoDien
                     lbnhanvien.Text = "";
                     lbtime.Text = "";
                     txtTongTien.Text = "";
-                    LoadComboboxSanPham();
+                    //LoadComboboxSanPham();
                 }
             }
+        }
+
+        private void fmChiTietBan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            UpdatefmManager();
         }
     }
 }

@@ -44,7 +44,8 @@ namespace GiaoDien
                         btn.BackColor = Color.White;
                         break;
                     default:
-                        btn.BackColor = Color.Aqua;
+                        btn.BackColor = Color.Red;
+                        btn.ForeColor = Color.White;
                         break;
                 }
                 flplisttable.Controls.Add(btn);
@@ -124,13 +125,28 @@ namespace GiaoDien
 
         private void btnChuyenBan_Click(object sender, EventArgs e)
         {
-            string MaHDNew = HoaDonTheoNgayBUS.Instance.getMaHDMoi();
+            string MaHDNew = HoaDonTheoNgayBUS.Instance.getMaHDMoi(); //Làm hóa đơn mới để chuyển sản phẩm vào
             string tb1 = cbbTable1.SelectedValue.ToString();
             string tb2 = cbbTable2.SelectedValue.ToString();
             if (MessageBox.Show("Bạn muốn chuyển bàn " + cbbTable1.Text + " qua bàn " + cbbTable2.Text + "", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
-                TableDAO.Instance.ChuyenBan(tb1, tb2, MaHDNew, fmDangNhap.getTaiKhoan.taiKhoan);
-                LoadTable();
+                if (TableDAO.Instance.getTrangThai(tb1).Equals("TRỐNG"))
+                {
+                    //MessageBox.Show("Phải chuyển bàn CÓ qua bàn TRỐNG\n\t" + cbbTable2.Text + " --> " + cbbTable1.Text, "LỖI");
+                    tb1 = cbbTable2.SelectedValue.ToString();
+                    tb2 = cbbTable1.SelectedValue.ToString();
+                    TableDAO.Instance.ChuyenBan(tb1, tb2, MaHDNew, fmDangNhap.getTaiKhoan.taiKhoan);
+                    LoadTable();
+                }
+                else
+                {
+                    if (tb1 == tb2) { }
+                    else
+                    {
+                        TableDAO.Instance.ChuyenBan(tb1, tb2, MaHDNew, fmDangNhap.getTaiKhoan.taiKhoan);
+                        LoadTable();
+                    }
+                }
             }
         }
 
@@ -139,10 +155,14 @@ namespace GiaoDien
             string MaHDNew = HoaDonTheoNgayBUS.Instance.getMaHDMoi();
             string tb1 = cbbTable1.SelectedValue.ToString();
             string tb2 = cbbTable2.SelectedValue.ToString();
-            if (MessageBox.Show("Bạn muốn chuyển bàn " + cbbTable1.Text + " qua bàn " + cbbTable2.Text + "", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn muốn gộp bàn " + cbbTable1.Text + " qua bàn " + cbbTable2.Text + "", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
-                TableDAO.Instance.GopBan(tb1, tb2);
-                LoadTable();
+                if (tb1 == tb2) { }
+                else
+                {
+                    TableDAO.Instance.GopBan(tb1, tb2);
+                    LoadTable();
+                }
             }
         }
 
@@ -155,6 +175,12 @@ namespace GiaoDien
         private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fmDoanhThu f = new fmDoanhThu();
+            f.Show();
+        }
+
+        private void chấmCôngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fmChamCong f = new fmChamCong();
             f.Show();
         }
     }

@@ -55,6 +55,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chấmCôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -77,6 +79,7 @@
             // 
             this.nhânViênToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminToolStripMenuItem,
+            this.quảnLýToolStripMenuItem,
             this.thôngTinTàiKhoảnToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
@@ -166,7 +169,7 @@
             // doanhThuToolStripMenuItem
             // 
             this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
-            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.doanhThuToolStripMenuItem.Text = "Doanh thu";
             this.doanhThuToolStripMenuItem.Click += new System.EventHandler(this.doanhThuToolStripMenuItem_Click);
             // 
@@ -298,6 +301,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "QUÁN CAFE GALAXY";
             // 
+            // quảnLýToolStripMenuItem
+            // 
+            this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chấmCôngToolStripMenuItem});
+            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.quảnLýToolStripMenuItem.Text = "Quản Lý";
+            // 
+            // chấmCôngToolStripMenuItem
+            // 
+            this.chấmCôngToolStripMenuItem.Name = "chấmCôngToolStripMenuItem";
+            this.chấmCôngToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.chấmCôngToolStripMenuItem.Text = "Chấm Công";
+            this.chấmCôngToolStripMenuItem.Click += new System.EventHandler(this.chấmCôngToolStripMenuItem_Click);
+            // 
             // fmManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,5 +369,7 @@
         private System.Windows.Forms.Button btnQuanLyBan;
         private System.Windows.Forms.ComboBox cbbTable2;
         private System.Windows.Forms.ToolStripMenuItem danhSáchNhânViênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chấmCôngToolStripMenuItem;
     }
 }
