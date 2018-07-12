@@ -61,5 +61,16 @@ namespace DAO
             string sql = "SP_GIAMGIA_VAT @MAHOADON , @GIAMGIA , @VAT";
             DataProvider.Instance.ExecuteNonQuery(sql, new object[] { MaHD, giamgia, vat });
         }
+        public double TongTienCa(string maca)
+        {
+            double tong = 0;
+            string sql = "SELECT SUM(THANHTOAN) AS TONGTIENCA FROM HOADON WHERE CAST(NGAYXUAT AS DATE) = CAST(GETDATE() AS DATE) AND  MACA = '" + maca + "'";
+            DataTable rs = DataProvider.Instance.ExecuteQuery(sql);
+            foreach (DataRow items in rs.Rows)
+            {
+                tong = Convert.ToDouble(items["TONGTIENCA"].ToString());
+            }
+            return tong;
+        }
     }
 }

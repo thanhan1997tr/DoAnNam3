@@ -19,7 +19,7 @@ namespace GiaoDien
         {
             InitializeComponent();
             loadlv();
-            loadcomboSP();
+            //loadcomboSP();
             loadNCC();
             loadcomboNCC();
         }
@@ -36,9 +36,9 @@ namespace GiaoDien
         }
         public void loadcomboSP()
         {
-            cbbTimsp.DisplayMember = "TENSP";
-            cbbTimsp.ValueMember = "MASP";
-            cbbTimsp.DataSource = SanPhamDAO.Instance.LoadComBoBoxSanPham();
+            //cbbTimsp.DisplayMember = "TENSP";
+            //cbbTimsp.ValueMember = "MASP";
+            //cbbTimsp.DataSource = SanPhamDAO.Instance.LoadComBoBoxSanPham();
         }
 
         public void loadlv()
@@ -51,7 +51,7 @@ namespace GiaoDien
         }
         private void btnThemsp_Click(object sender, EventArgs e)
         {
-            if (txtMasp_sp.Text == "" || txtTensp_sp.Text == "" || txtDonGiaBan_cb.Text == "")
+            if (txtMasp_sp.Text == "" || txtTensp_sp.Text == "" || txtDonGiaBan_sp.Text == "")
             {
                 MessageBox.Show("Nhập thông tin chưa đầy đủ", "Thông báo");
             }
@@ -59,7 +59,7 @@ namespace GiaoDien
             {
                 try
                 {
-                    SanPhamDTO sp = new SanPhamDTO(txtMasp_sp.Text,txtTensp_sp.Text, (float)Convert.ToDouble(txtDonGiaBan_cb.Text));
+                    SanPhamDTO sp = new SanPhamDTO(txtMasp_sp.Text,txtTensp_sp.Text, (float)Convert.ToDouble(txtDonGiaBan_sp.Text));
                     if (SanPhamBUS.Instance.ThemSanPham(sp) > 0)
                     {
                         loadlv();
@@ -75,7 +75,7 @@ namespace GiaoDien
 
         private void btnSuasp_Click(object sender, EventArgs e)
         {
-            if (txtMasp_sp.Text == "" || txtTensp_sp.Text == "" || txtDonGiaBan_cb.Text == "")
+            if (txtMasp_sp.Text == "" || txtTensp_sp.Text == "" || txtDonGiaBan_sp.Text == "")
             {
                 MessageBox.Show("Nhập thông tin chưa đầy đủ", "Thông báo");
             }
@@ -83,7 +83,7 @@ namespace GiaoDien
             {
                 try
                 {
-                    SanPhamDTO sp = new SanPhamDTO(txtMasp_sp.Text, txtTensp_sp.Text, (float)Convert.ToDouble(txtDonGiaBan_cb.Text));
+                    SanPhamDTO sp = new SanPhamDTO(txtMasp_sp.Text, txtTensp_sp.Text, (float)Convert.ToDouble(txtDonGiaBan_sp.Text));
                     if (SanPhamBUS.Instance.SuaSanPham(sp) > 0)
                     {
                         loadlv();
@@ -204,6 +204,27 @@ namespace GiaoDien
             }
         }
 
-        
+        private void btnNgungBan_Click(object sender, EventArgs e)
+        {
+            if (SanPhamBUS.Instance.loadSanPhamNgungBan(lvSanPham) == false)
+            {
+                MessageBox.Show("Không có sản phẩm nào ngừng bán");
+            }
+        }
+
+        private void btnDangBan_Click(object sender, EventArgs e)
+        {
+            loadlv();
+        }
+
+        private void lvSanPham_MouseClick(object sender, MouseEventArgs e)
+        {
+            foreach (ListViewItem lvitem in lvSanPham.SelectedItems)
+            {
+                txtMasp_sp.Text = lvitem.SubItems[0].Text;
+                txtTensp_sp.Text = lvitem.SubItems[1].Text;
+                txtDonGiaBan_sp.Text = lvitem.SubItems[2].Text;
+            }
+        }
     }
 }

@@ -16,9 +16,11 @@ namespace DTO
         private String sDienthoai;
         private String sLuong;
         private String sMatkhau;
-        private String sQuyen;
+        private String sMaChucVu;
+        private String sNgayvaolam;
+        private String sMaca;
 
-        public NhanVienDTO(String ma, String ten, String ngaysinh, String gioitinh, String diachi, String dienthoai, String matkhau, String quyen, String luong)
+        public NhanVienDTO(String ma, String ten, String ngaysinh, String gioitinh, String diachi, String dienthoai, String matkhau, String macv, String luong, String ngaylam, String maca)
         {
             this.sManv = ma;
             this.sTennv = ten;
@@ -27,8 +29,10 @@ namespace DTO
             this.sDiachi = diachi;
             this.sDienthoai = dienthoai;
             this.sMatkhau = matkhau;
-            this.sQuyen = quyen;
+            this.SMaChucVu = macv;
             this.sLuong = luong;
+            this.SNgayvaolam = ngaylam;
+            this.SMaca = maca;
         }
 
         public string SManv
@@ -135,16 +139,42 @@ namespace DTO
             }
         }
 
-        public string SQuyen
+        public string SMaChucVu
         {
             get
             {
-                return sQuyen;
+                return sMaChucVu;
             }
 
             set
             {
-                sQuyen = value;
+                sMaChucVu = value;
+            }
+        }
+
+        public string SNgayvaolam
+        {
+            get
+            {
+                return sNgayvaolam;
+            }
+
+            set
+            {
+                sNgayvaolam = value;
+            }
+        }
+
+        public string SMaca
+        {
+            get
+            {
+                return sMaca;
+            }
+
+            set
+            {
+                sMaca = value;
             }
         }
     }

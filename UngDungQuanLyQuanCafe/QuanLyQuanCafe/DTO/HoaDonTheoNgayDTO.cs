@@ -72,7 +72,22 @@ namespace DTO
             set { sGhiChu = value; }
         }
 
-        public HoaDonTheoNgayDTO(string maHD, string ngaynhap, string ngayxuat, string manv, string maban, float giamgia, float vat, float thanhtoan, string ghichu)
+        public string SMaCa
+        {
+            get
+            {
+                return sMaCa;
+            }
+
+            set
+            {
+                sMaCa = value;
+            }
+        }
+
+        private string sMaCa;
+
+        public HoaDonTheoNgayDTO(string maHD, string ngaynhap, string ngayxuat, string manv, string maban, float giamgia, float vat, float thanhtoan, string ghichu, string maca)
         {
             this.sMaHD = maHD;
             this.sNgayNhap = ngaynhap;
@@ -83,6 +98,7 @@ namespace DTO
             this.fVAT = vat;
             this.fThanhToan = thanhtoan;
             this.sGhiChu = ghichu;
+            this.SMaCa = maca;
         }
     }
 }

@@ -53,7 +53,8 @@ namespace DAO
                 String tensp = items["TENSP"].ToString();
                 int soluong = Convert.ToInt32(items["SOLUONG"].ToString());
                 String dongia = items["DONGIABAN"].ToString();
-                HoaDonChiTietDTO hdct = new HoaDonChiTietDTO(MaHD, ngaynhap, ngayxuat, "", maban, giamgia, vat, thanhtoan, "", masp, tensp, tennv, soluong, dongia);
+                String maca = items["TENCA"].ToString();
+                HoaDonChiTietDTO hdct = new HoaDonChiTietDTO(MaHD, ngaynhap, ngayxuat, "", maban, giamgia, vat, thanhtoan, "", masp, tensp, tennv, soluong, dongia, maca);
                 hdlist.Add(hdct);
             }
             return hdlist;

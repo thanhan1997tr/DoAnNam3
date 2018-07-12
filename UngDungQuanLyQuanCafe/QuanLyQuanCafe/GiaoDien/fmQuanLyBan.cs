@@ -13,8 +13,10 @@ namespace GiaoDien
 {
     public partial class fmQuanLyBan : Form
     {
-        public fmQuanLyBan()
+        fmManager fmMa;
+        public fmQuanLyBan(fmManager f)
         {
+            fmMa = f;
             InitializeComponent();
             LoadDsTable();
         }
@@ -24,13 +26,14 @@ namespace GiaoDien
             TableBUS.Instance.LoadTable(lvBan);
         }
 
-        public delegate void Update();
-        public Update UpdatefmManager;
+        //public delegate void Update();
+        //public Update UpdatefmManager;
         private void btnThemban_Click(object sender, EventArgs e)
         {
             TableBUS.Instance.ThemBan();
             LoadDsTable();
-            UpdatefmManager();
+            fmMa.LoadTable();
+            //UpdatefmManager();
         }
 
         private void btnXoaban_Click(object sender, EventArgs e)
@@ -42,7 +45,8 @@ namespace GiaoDien
             else
             {
                 LoadDsTable();
-                UpdatefmManager();
+                fmMa.LoadTable();
+                //UpdatefmManager();
             }
         }
 

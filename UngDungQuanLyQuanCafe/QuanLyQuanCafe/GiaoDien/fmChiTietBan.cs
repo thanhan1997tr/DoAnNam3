@@ -17,8 +17,10 @@ namespace GiaoDien
 {
     public partial class fmChiTietBan : Form
     {
-        public fmChiTietBan()
+        fmManager fmMa;
+        public fmChiTietBan(fmManager f)
         {
+            fmMa = f;
             InitializeComponent();
             LoadComboboxSanPham();
             if (fmManager.getBan.sTrangThai.Equals("CÓ"))
@@ -87,8 +89,8 @@ namespace GiaoDien
         }
 
         #region THÊM BỚT MÓN
-        public delegate void Update();
-        public Update UpdatefmManager;
+        //public delegate void Update();
+        //public Update UpdatefmManager;
         private void btnThemMon_Click(object sender, EventArgs e)
         {
             if (SanPhamDAO.Instance.KiemTraTenSP(cbbThemMon_Manager.Text))
@@ -109,9 +111,10 @@ namespace GiaoDien
                     string MaNv = fmDangNhap.getTaiKhoan.taiKhoan;
                     float GiamGia = ((float)nbrGiamGia.Value) / 100;
                     float Vat = ((float)nbrVAT.Value) / 100;
+                    string MaCa = fmManager.getCa.maca;
                     if (soluong > 0)
                     {
-                        HoaDonTheoNgayDTO hd = new HoaDonTheoNgayDTO(MaHDNew, "", "", MaNv, MaBan, GiamGia, Vat, 0, "");
+                        HoaDonTheoNgayDTO hd = new HoaDonTheoNgayDTO(MaHDNew, "", "", MaNv, MaBan, GiamGia, Vat, 0, "", MaCa);
                         HoaDonTheoNgayDAO.Instance.ThemHoaDon(hd);
                         HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(MaHDNew, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
                         //Load lại danh sách sản phẩm trong hóa đơn
@@ -202,6 +205,8 @@ namespace GiaoDien
                     float Vat = (float)Convert.ToDouble(nbrVAT.Value) / 100;
                     float TongTien = HoaDonThanhToanBUS.getTongTien.TongTien - (HoaDonThanhToanBUS.getTongTien.TongTien * GiamGia) + (HoaDonThanhToanBUS.getTongTien.TongTien * Vat);
                     HoaDonThanhToanDAO.Instance.ThanhToan(KtraMaHD, TongTien, GiamGia, Vat);
+                    string MaCa = fmManager.getCa.maca;
+                    fmMa.TongTienCa(MaCa);
                     fmHoaDonChiTiet fm = new fmHoaDonChiTiet(KtraMaHD);
                     fm.Text = KtraMaHD;
                     fm.ShowDialog();
@@ -220,7 +225,8 @@ namespace GiaoDien
 
         private void fmChiTietBan_FormClosing(object sender, FormClosingEventArgs e)
         {
-            UpdatefmManager();
+            //UpdatefmManager();
+            fmMa.LoadTable();
         }
     }
 }

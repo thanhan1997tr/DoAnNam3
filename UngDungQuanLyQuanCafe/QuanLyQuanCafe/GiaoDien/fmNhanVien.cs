@@ -22,6 +22,8 @@ namespace GiaoDien
             LoadDsNhanVien();
             txtManv.Text = NhanVienBUS.Instance.getMaNvMoi();
             LoadComboboxTenNhanVien();
+            LoadComboChucVu();
+            LoadComboCa();
         }
         #region CÁC HÀM XỬ LÝ
         public void Clear_ALL()
@@ -34,6 +36,9 @@ namespace GiaoDien
             txtDienThoainv.Text = "";
             txtLuongnv.Text = "";
             txtMatKhau.Text = "1";
+            LoadComboChucVu();
+            LoadComboCa();
+            dtimeNgayVaoLam.Text = DateTime.Now.ToString();
         }
         private void btnLamMoiForm_Click(object sender, EventArgs e)
         {
@@ -45,6 +50,21 @@ namespace GiaoDien
             cbbTimNv.DisplayMember = "TENNV";
             cbbTimNv.DataSource = NhanVienDAO.Instance.LoadComboTenNhanVien();
         }
+
+        public void LoadComboChucVu()
+        {
+            cbbChucvu.DataSource = NhanVienDAO.Instance.LoadComboChucVu();
+            cbbChucvu.DisplayMember = "TENCHUCVU";
+            cbbChucvu.ValueMember = "MACHUCVU";
+        }
+
+        public void LoadComboCa()
+        {
+            cbbCaLam.DataSource = NhanVienDAO.Instance.LoadComboCa();
+            cbbCaLam.DisplayMember = "TENCA";
+            cbbCaLam.ValueMember = "MACA";
+        }
+
         public void LoadDsNhanVien()
         {
             NhanVienBUS.Instance.Load(lvNhanVien);
@@ -54,7 +74,7 @@ namespace GiaoDien
         #region THÊM, XÓA, SỬA, TÌM NHÂN VIÊN
         private void btnThemNv_Click(object sender, EventArgs e)
         {
-            if(txtTennv.Text.Equals("") || txtMatKhau.Text.Equals("") || txtLuongnv.Text.Equals("") || txtDienThoainv.Text.Equals("") || txtDiaChinv.Text.Equals(""))
+            if (txtTennv.Text.Equals("") || txtMatKhau.Text.Equals("") || txtLuongnv.Text.Equals("") || txtDienThoainv.Text.Equals("") || txtDiaChinv.Text.Equals(""))
             {
                 MessageBox.Show("Nhập thông tin chưa đầy đủ", "Thông báo");
             }
@@ -78,15 +98,11 @@ namespace GiaoDien
                     string dienthoai = txtDienThoainv.Text;
                     string luong = txtLuongnv.Text;
                     string matkhau = MaHoaMD5.ToMD5(txtMatKhau.Text);
-                    string q = "";
-                    if (rbtnAD.Checked)
-                        q = "ADMIN";
-                    else if (rbtnNv.Checked)
-                        q = "NHÂN VIÊN";
-                    else
-                        q = "QUẢN LÝ";
+                    string q = cbbChucvu.SelectedValue.ToString();
+                    string ngaylam = dtimeNgayVaoLam.Value.ToString("MM/dd/yyyy");
+                    string ca = cbbCaLam.SelectedValue.ToString();
 
-                    NhanVienDTO nv = new NhanVienDTO(ma, ten, ngaysinh, gt, diachi, dienthoai, matkhau, q, luong);
+                    NhanVienDTO nv = new NhanVienDTO(ma, ten, ngaysinh, gt, diachi, dienthoai, matkhau, q, luong, ngaylam, ca);
                     if (NhanVienBUS.Instance.ThemNhanVien(nv) > 0)
                     {
                         LoadDsNhanVien();
@@ -99,7 +115,7 @@ namespace GiaoDien
                         MessageBox.Show("Thêm không thành công", "Thông báo");
                     }
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     if (NhanVienBUS.Instance.ktraDienThoai(txtDienThoainv.Text) == false)
                     {
@@ -117,7 +133,7 @@ namespace GiaoDien
         {
             try
             {
-                if (rbtnAD.Checked)
+                if (cbbChucvu.Text.ToString().ToUpper().Equals("ADMIN"))
                 {
                     MessageBox.Show("Không thể xóa ADMIN", "Thông báo");
                 }
@@ -127,11 +143,18 @@ namespace GiaoDien
                     {
                         if (MessageBox.Show("Xóa nhân viên " + txtTennv.Text + " (" + txtManv.Text + ")" + " ?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                         {
-                            NhanVienBUS.Instance.XoaNhanVien(txtManv.Text);
-                            LoadDsNhanVien();
-                            Clear_ALL();
-                            LoadComboboxTenNhanVien();
-                            MessageBox.Show("Xóa thành công", "Thông báo");
+                            if (NhanVienBUS.Instance.XoaNhanVien(txtManv.Text) > 0)
+                            {
+                                LoadDsNhanVien();
+                                Clear_ALL();
+                                LoadComboboxTenNhanVien();
+                                MessageBox.Show("Xóa thành công", "Thông báo");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Xóa không thành công", "Thông báo");
+                            }
+                            
                         }
                     }
                     else
@@ -140,7 +163,7 @@ namespace GiaoDien
                     }
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Lỗi", "Thông báo");
             }
@@ -174,15 +197,11 @@ namespace GiaoDien
                         string dienthoai = txtDienThoainv.Text;
                         string luong = txtLuongnv.Text;
                         string matkhau = "";
-                        string q = "";
-                        if (rbtnAD.Checked)
-                            q = "ADMIN";
-                        else if (rbtnNv.Checked)
-                            q = "NHÂN VIÊN";
-                        else
-                            q = "QUẢN LÝ";
+                        string q = cbbChucvu.SelectedValue.ToString();
+                        string ngaylam = dtimeNgayVaoLam.Value.ToString("MM/dd/yyyy");
+                        string ca = cbbCaLam.SelectedValue.ToString();
 
-                        NhanVienDTO nv = new NhanVienDTO(ma, ten, ngaysinh, gt, diachi, dienthoai, matkhau, q, luong);
+                        NhanVienDTO nv = new NhanVienDTO(ma, ten, ngaysinh, gt, diachi, dienthoai, matkhau, q, luong, ngaylam, ca);
                         if (NhanVienBUS.Instance.SuaNhanVien(nv) > 0)
                         {
                             LoadDsNhanVien();
@@ -232,7 +251,7 @@ namespace GiaoDien
                         MessageBox.Show("Không thành công", "Thông báo");
                     }
                 }
-                
+
             }
             else
             {
@@ -262,12 +281,9 @@ namespace GiaoDien
                 txtDiaChinv.Text = lvitem.SubItems[4].Text;
                 txtDienThoainv.Text = lvitem.SubItems[5].Text;
                 txtLuongnv.Text = lvitem.SubItems[6].Text;
-                if (lvitem.SubItems[7].Text.ToString().ToUpper() == "ADMIN")
-                    rbtnAD.Checked = true;
-                else if (lvitem.SubItems[7].Text.ToString().ToUpper() == "NHÂN VIÊN")
-                    rbtnNv.Checked = true;
-                else
-                    rbtnQL.Checked = true;
+                cbbChucvu.Text = lvitem.SubItems[7].Text.ToString();
+                dtimeNgayVaoLam.Text = lvitem.SubItems[8].Text;
+                cbbCaLam.Text = lvitem.SubItems[9].Text.ToString();
             }
         }
         #endregion

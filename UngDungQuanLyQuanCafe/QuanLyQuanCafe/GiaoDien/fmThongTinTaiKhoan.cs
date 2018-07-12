@@ -22,9 +22,13 @@ namespace GiaoDien
         }
 
         TaiKhoanDTO tk = new TaiKhoanDTO("", "", "", "");
-        public String getQuyen()
+        public String getChucvu()
         {
             return tk.SQuyen;
+        }
+        public String getTenNv()
+        {
+            return tk.STenNhanVien;
         }
         public void Load_ThongTinTaiKhoan()
         {

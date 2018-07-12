@@ -53,6 +53,8 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCaLam = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnInHoaDon
@@ -66,7 +68,7 @@
             // 
             // txtTongTienHD
             // 
-            this.txtTongTienHD.Location = new System.Drawing.Point(362, 367);
+            this.txtTongTienHD.Location = new System.Drawing.Point(362, 382);
             this.txtTongTienHD.Name = "txtTongTienHD";
             this.txtTongTienHD.ReadOnly = true;
             this.txtTongTienHD.Size = new System.Drawing.Size(119, 20);
@@ -172,7 +174,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(273, 367);
+            this.label5.Location = new System.Drawing.Point(273, 382);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 26;
@@ -204,9 +206,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(330, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 16);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Nhân viên xuất hóa đơn";
+            this.label3.Text = "Thu ngân";
             // 
             // label2
             // 
@@ -237,7 +239,7 @@
             this.columnHeader4});
             this.lvhdct.FullRowSelect = true;
             this.lvhdct.GridLines = true;
-            this.lvhdct.Location = new System.Drawing.Point(6, 160);
+            this.lvhdct.Location = new System.Drawing.Point(6, 175);
             this.lvhdct.Name = "lvhdct";
             this.lvhdct.Size = new System.Drawing.Size(475, 188);
             this.lvhdct.TabIndex = 16;
@@ -264,12 +266,33 @@
             this.columnHeader4.Text = "Đơn giá";
             this.columnHeader4.Width = 100;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label11.Location = new System.Drawing.Point(6, 144);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(28, 16);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Ca:";
+            // 
+            // txtCaLam
+            // 
+            this.txtCaLam.Location = new System.Drawing.Point(90, 144);
+            this.txtCaLam.Name = "txtCaLam";
+            this.txtCaLam.ReadOnly = true;
+            this.txtCaLam.Size = new System.Drawing.Size(155, 20);
+            this.txtCaLam.TabIndex = 37;
+            // 
             // fmHoaDonChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.ClientSize = new System.Drawing.Size(486, 452);
+            this.Controls.Add(this.txtCaLam);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnInHoaDon);
             this.Controls.Add(this.txtTongTienHD);
             this.Controls.Add(this.txtNhanVienXuat);
@@ -325,5 +348,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtCaLam;
     }
 }

@@ -193,17 +193,19 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Tổng Tiền:";
             // 
-            // frmDoanhThu
+            // fmDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.ClientSize = new System.Drawing.Size(615, 443);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvDoanhThu);
             this.Controls.Add(this.btnIn_dt);
             this.Controls.Add(this.txtTongTien_dt);
             this.Controls.Add(this.label3);
-            this.Name = "frmDoanhThu";
+            this.Name = "fmDoanhThu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDoanhThu";
             this.Load += new System.EventHandler(this.frmDoanhThu_Load);
             this.panel1.ResumeLayout(false);

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaDAO.cs" />
     <Compile Include="ChamCongDAO.cs" />
     <Compile Include="DangNhapDAO.cs" />
     <Compile Include="DataProvider.cs" />

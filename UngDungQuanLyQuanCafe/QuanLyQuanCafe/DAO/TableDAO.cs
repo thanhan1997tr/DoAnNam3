@@ -10,8 +10,8 @@ namespace DAO
 {
     public class TableDAO
     {
-        public static int TableWidth = 85;
-        public static int TableHeight = 85;
+        public static int TableWidth = 95;
+        public static int TableHeight = 95;
         private static TableDAO instance;
 
         public static TableDAO Instance

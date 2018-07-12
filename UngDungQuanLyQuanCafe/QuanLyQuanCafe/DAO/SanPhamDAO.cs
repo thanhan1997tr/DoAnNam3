@@ -53,6 +53,22 @@ namespace DAO
             return listSP;
         }
 
+        public List<SanPhamDTO> loadSanPhamNgungBan()
+        {
+            List<SanPhamDTO> listSP = new List<SanPhamDTO>();
+            string query = "SELECT * FROM SANPHAM WHERE GHICHU = N'NGỪNG BÁN'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                string maSP = item["MASP"].ToString();
+                string tenSP = item["TENSP"].ToString();
+                float dongiaban = (float)Convert.ToDouble(item["DONGIABAN"]);
+                SanPhamDTO spnew = new SanPhamDTO(maSP, tenSP, dongiaban);
+                listSP.Add(spnew);
+            }
+            return listSP;
+        }
+
         public int themSP(SanPhamDTO sp)
         {
             string sql = "SP_SANPHAM_THEM @MASP , @TENSP , @DONGIABAN";
@@ -67,8 +83,8 @@ namespace DAO
 
         public int xoaSP(string masp)
         {
-            string sql = "DELETE FROM SANPHAM WHERE MASP = '" + masp + "'";
-            return DataProvider.Instance.ExecuteNonQuery(sql);
+            string sql = "SP_SANPHAM_XOA @MASP";
+            return DataProvider.Instance.ExecuteNonQuery(sql, new object[] { masp });
         }
     }
 

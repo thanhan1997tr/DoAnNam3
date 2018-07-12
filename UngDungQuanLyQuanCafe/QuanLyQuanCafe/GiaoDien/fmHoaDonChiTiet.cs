@@ -18,10 +18,14 @@ namespace GiaoDien
     {
         public fmHoaDonChiTiet(string MaHD)
         {
+            getMaHd.sMaHd = MaHD;
             InitializeComponent();
             LoadHDCT(MaHD);
         }
-
+        public static class getMaHd
+        {
+            static public string sMaHd;
+        }
         public void LoadHDCT(string MaHD)
         {
             List<HoaDonChiTietDTO> hdlist = HoaDonChiTietBUS.Instance.LoadHDCT(MaHD, lvhdct);
@@ -37,6 +41,7 @@ namespace GiaoDien
                 Thread.CurrentThread.CurrentCulture = culture;
                 txtTongTienHD.Text = l.FThanhToan.ToString("c", culture);
                 txtVAT.Text = l.FVAT.ToString();
+                txtCaLam.Text = l.SMaCa;
             }
         }
     }

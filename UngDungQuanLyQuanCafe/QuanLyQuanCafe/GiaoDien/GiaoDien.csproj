@@ -65,6 +65,12 @@
     <Compile Include="fmDangNhap.Designer.cs">
       <DependentUpon>fmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmGiaoCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmGiaoCa.Designer.cs">
+      <DependentUpon>fmGiaoCa.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmHoaDonChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmDangNhap.resx">
       <DependentUpon>fmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmGiaoCa.resx">
+      <DependentUpon>fmGiaoCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmHoaDonChiTiet.resx">
       <DependentUpon>fmHoaDonChiTiet.cs</DependentUpon>
@@ -209,6 +218,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Login Manager_3503.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnTable.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

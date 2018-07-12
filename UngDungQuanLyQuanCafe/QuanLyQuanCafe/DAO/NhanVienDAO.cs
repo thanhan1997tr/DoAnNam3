@@ -46,6 +46,18 @@ namespace DAO
             string sql = "SP_NHANVIEN_LOADCOMBOBOX";
             return DataProvider.Instance.ExecuteQuery(sql);
         }
+
+        public DataTable LoadComboChucVu()
+        {
+            string sql = "SELECT * FROM CHUCVU";
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
+
+        public DataTable LoadComboCa()
+        {
+            string sql = "SELECT * FROM CA";
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
         public List<NhanVienDTO> Load()
         {
             List<NhanVienDTO> nv = new List<NhanVienDTO>();
@@ -60,9 +72,11 @@ namespace DAO
                 string diachi = items["DIACHI"].ToString();
                 string dienthoai = items["DIENTHOAI"].ToString();
                 string matkhau = items["MATKHAU"].ToString();
-                string q = items["QUYEN"].ToString();
+                string q = items["TENCHUCVU"].ToString();
                 string luong = items["LUONGCOBAN"].ToString();
-                NhanVienDTO nvnew = new NhanVienDTO(manv, tennv, ngaysinh, gioitinh, diachi, dienthoai, matkhau, q, luong);
+                string ngaylam = items["NGAYVAOLAM"].ToString();
+                string maca = items["TENCA"].ToString();
+                NhanVienDTO nvnew = new NhanVienDTO(manv, tennv, ngaysinh, gioitinh, diachi, dienthoai, matkhau, q, luong, ngaylam, maca);
                 nv.Add(nvnew);
             }
             return nv;
@@ -70,8 +84,8 @@ namespace DAO
 
         public int ThemNhanVien(NhanVienDTO nv)
         {
-            string sql = "SP_NHANVIEN_THEM @manv , @tennv , @ngaysinh , @gioitinh , @diachi , @dienthoai , @matkhau , @quyen , @luong";
-            return DataProvider.Instance.ExecuteNonQuery(sql, new object[] { nv.SManv, nv.STennv, nv.SNgaysinh, nv.SGioitinh, nv.SDiachi, nv.SDienthoai, nv.SMatkhau, nv.SQuyen, nv.SLuong });
+            string sql = "SP_NHANVIEN_THEM @manv , @tennv , @ngaysinh , @gioitinh , @diachi , @dienthoai , @matkhau , @machucvu , @luong , @ngayvaolam , @maca";
+            return DataProvider.Instance.ExecuteNonQuery(sql, new object[] { nv.SManv, nv.STennv, nv.SNgaysinh, nv.SGioitinh, nv.SDiachi, nv.SDienthoai, nv.SMatkhau, nv.SMaChucVu, nv.SLuong, nv.SNgayvaolam, nv.SMaca });
         }
         public int XoaNhanVien(string manv)
         {
@@ -80,8 +94,8 @@ namespace DAO
         }
         public int SuaNhanVien(NhanVienDTO nv)
         {
-            string sql = "SP_NHANVIEN_SUA @manv , @tennv , @ngaysinh , @gioitinh , @diachi , @dienthoai , @quyen , @luong";
-            return DataProvider.Instance.ExecuteNonQuery(sql, new object[] { nv.SManv, nv.STennv, nv.SNgaysinh, nv.SGioitinh, nv.SDiachi, nv.SDienthoai, nv.SQuyen, nv.SLuong });
+            string sql = "SP_NHANVIEN_SUA @manv , @tennv , @ngaysinh , @gioitinh , @diachi , @dienthoai , @machucvu , @luong , @ngayvaolam , @maca";
+            return DataProvider.Instance.ExecuteNonQuery(sql, new object[] { nv.SManv, nv.STennv, nv.SNgaysinh, nv.SGioitinh, nv.SDiachi, nv.SDienthoai, nv.SMaChucVu, nv.SLuong, nv.SNgayvaolam, nv.SMaca });
         }
         public int SuaMatKhauNhanVien(string manv, string matkhau)
         {

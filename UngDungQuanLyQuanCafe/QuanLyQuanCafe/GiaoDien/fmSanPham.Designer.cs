@@ -29,20 +29,7 @@
         private void InitializeComponent()
         {
             this.tabSanPham = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtDonGiaBan_cb = new System.Windows.Forms.TextBox();
-            this.txtTensp_sp = new System.Windows.Forms.TextBox();
-            this.txtMasp_sp = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lvSanPham = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbbTimsp = new System.Windows.Forms.ComboBox();
-            this.btnTimsp = new System.Windows.Forms.Button();
             this.btnSuasp = new System.Windows.Forms.Button();
             this.btnXoasp = new System.Windows.Forms.Button();
             this.btnThemsp = new System.Windows.Forms.Button();
@@ -68,13 +55,26 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnNgungBan = new System.Windows.Forms.Button();
+            this.btnDangBan = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lvSanPham = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMasp_sp = new System.Windows.Forms.TextBox();
+            this.txtTensp_sp = new System.Windows.Forms.TextBox();
+            this.txtDonGiaBan_sp = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabSanPham.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabSanPham
@@ -84,137 +84,22 @@
             this.tabSanPham.Location = new System.Drawing.Point(4, 22);
             this.tabSanPham.Name = "tabSanPham";
             this.tabSanPham.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSanPham.Size = new System.Drawing.Size(597, 235);
+            this.tabSanPham.Size = new System.Drawing.Size(597, 273);
             this.tabSanPham.TabIndex = 0;
             this.tabSanPham.Text = "Sản Phẩm";
             this.tabSanPham.UseVisualStyleBackColor = true;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtDonGiaBan_cb);
-            this.panel2.Controls.Add(this.txtTensp_sp);
-            this.panel2.Controls.Add(this.txtMasp_sp);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.lvSanPham);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(1, 54);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(593, 181);
-            this.panel2.TabIndex = 3;
-            // 
-            // txtDonGiaBan_cb
-            // 
-            this.txtDonGiaBan_cb.Location = new System.Drawing.Point(467, 104);
-            this.txtDonGiaBan_cb.Name = "txtDonGiaBan_cb";
-            this.txtDonGiaBan_cb.Size = new System.Drawing.Size(122, 20);
-            this.txtDonGiaBan_cb.TabIndex = 7;
-            // 
-            // txtTensp_sp
-            // 
-            this.txtTensp_sp.Location = new System.Drawing.Point(467, 50);
-            this.txtTensp_sp.Name = "txtTensp_sp";
-            this.txtTensp_sp.Size = new System.Drawing.Size(122, 20);
-            this.txtTensp_sp.TabIndex = 6;
-            // 
-            // txtMasp_sp
-            // 
-            this.txtMasp_sp.Location = new System.Drawing.Point(467, 4);
-            this.txtMasp_sp.Name = "txtMasp_sp";
-            this.txtMasp_sp.Size = new System.Drawing.Size(122, 20);
-            this.txtMasp_sp.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(356, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Đơn giá bán";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(356, 54);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Tên sản phẩm";
-            // 
-            // lvSanPham
-            // 
-            this.lvSanPham.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader5});
-            this.lvSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lvSanPham.FullRowSelect = true;
-            this.lvSanPham.GridLines = true;
-            this.lvSanPham.Location = new System.Drawing.Point(6, 4);
-            this.lvSanPham.Name = "lvSanPham";
-            this.lvSanPham.Size = new System.Drawing.Size(339, 174);
-            this.lvSanPham.TabIndex = 8;
-            this.lvSanPham.UseCompatibleStateImageBehavior = false;
-            this.lvSanPham.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã sản phẩm";
-            this.columnHeader1.Width = 91;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên sản phẩm";
-            this.columnHeader2.Width = 157;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Đơn giá bán";
-            this.columnHeader5.Width = 86;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(356, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Mã sản phẩm";
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cbbTimsp);
-            this.panel1.Controls.Add(this.btnTimsp);
+            this.panel1.Controls.Add(this.btnDangBan);
+            this.panel1.Controls.Add(this.btnNgungBan);
             this.panel1.Controls.Add(this.btnSuasp);
             this.panel1.Controls.Add(this.btnXoasp);
             this.panel1.Controls.Add(this.btnThemsp);
             this.panel1.Location = new System.Drawing.Point(2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(593, 50);
+            this.panel1.Size = new System.Drawing.Size(593, 63);
             this.panel1.TabIndex = 2;
-            // 
-            // cbbTimsp
-            // 
-            this.cbbTimsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbbTimsp.FormattingEnabled = true;
-            this.cbbTimsp.Location = new System.Drawing.Point(359, 12);
-            this.cbbTimsp.Name = "cbbTimsp";
-            this.cbbTimsp.Size = new System.Drawing.Size(122, 28);
-            this.cbbTimsp.TabIndex = 3;
-            // 
-            // btnTimsp
-            // 
-            this.btnTimsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTimsp.Location = new System.Drawing.Point(487, 7);
-            this.btnTimsp.Name = "btnTimsp";
-            this.btnTimsp.Size = new System.Drawing.Size(102, 37);
-            this.btnTimsp.TabIndex = 4;
-            this.btnTimsp.Text = "Tìm";
-            this.btnTimsp.UseVisualStyleBackColor = true;
             // 
             // btnSuasp
             // 
@@ -256,7 +141,7 @@
             this.tabControl1.Location = new System.Drawing.Point(-3, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(605, 261);
+            this.tabControl1.Size = new System.Drawing.Size(605, 299);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -457,24 +342,143 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnNgungBan
+            // 
+            this.btnNgungBan.Location = new System.Drawing.Point(359, 7);
+            this.btnNgungBan.Name = "btnNgungBan";
+            this.btnNgungBan.Size = new System.Drawing.Size(225, 23);
+            this.btnNgungBan.TabIndex = 3;
+            this.btnNgungBan.Text = "Sản phẩm ngừng bán";
+            this.btnNgungBan.UseVisualStyleBackColor = true;
+            this.btnNgungBan.Click += new System.EventHandler(this.btnNgungBan_Click);
+            // 
+            // btnDangBan
+            // 
+            this.btnDangBan.Location = new System.Drawing.Point(359, 35);
+            this.btnDangBan.Name = "btnDangBan";
+            this.btnDangBan.Size = new System.Drawing.Size(225, 23);
+            this.btnDangBan.TabIndex = 4;
+            this.btnDangBan.Text = "Sản phẩm đang bán";
+            this.btnDangBan.UseVisualStyleBackColor = true;
+            this.btnDangBan.Click += new System.EventHandler(this.btnDangBan_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(356, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Mã sản phẩm";
+            // 
+            // lvSanPham
+            // 
+            this.lvSanPham.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader5});
+            this.lvSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lvSanPham.FullRowSelect = true;
+            this.lvSanPham.GridLines = true;
+            this.lvSanPham.Location = new System.Drawing.Point(6, 4);
+            this.lvSanPham.Name = "lvSanPham";
+            this.lvSanPham.Size = new System.Drawing.Size(339, 172);
+            this.lvSanPham.TabIndex = 8;
+            this.lvSanPham.UseCompatibleStateImageBehavior = false;
+            this.lvSanPham.View = System.Windows.Forms.View.Details;
+            this.lvSanPham.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lvSanPham_MouseClick);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã sản phẩm";
+            this.columnHeader1.Width = 91;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên sản phẩm";
+            this.columnHeader2.Width = 157;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Đơn giá bán";
+            this.columnHeader5.Width = 86;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(356, 54);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(94, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Tên sản phẩm";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(356, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Đơn giá bán";
+            // 
+            // txtMasp_sp
+            // 
+            this.txtMasp_sp.Location = new System.Drawing.Point(467, 4);
+            this.txtMasp_sp.Name = "txtMasp_sp";
+            this.txtMasp_sp.Size = new System.Drawing.Size(122, 20);
+            this.txtMasp_sp.TabIndex = 5;
+            // 
+            // txtTensp_sp
+            // 
+            this.txtTensp_sp.Location = new System.Drawing.Point(467, 50);
+            this.txtTensp_sp.Name = "txtTensp_sp";
+            this.txtTensp_sp.Size = new System.Drawing.Size(122, 20);
+            this.txtTensp_sp.TabIndex = 6;
+            // 
+            // txtDonGiaBan_sp
+            // 
+            this.txtDonGiaBan_sp.Location = new System.Drawing.Point(467, 104);
+            this.txtDonGiaBan_sp.Name = "txtDonGiaBan_sp";
+            this.txtDonGiaBan_sp.Size = new System.Drawing.Size(122, 20);
+            this.txtDonGiaBan_sp.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtDonGiaBan_sp);
+            this.panel2.Controls.Add(this.txtTensp_sp);
+            this.panel2.Controls.Add(this.txtMasp_sp);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lvSanPham);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(3, 88);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(593, 179);
+            this.panel2.TabIndex = 3;
+            // 
             // fmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 262);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
+            this.ClientSize = new System.Drawing.Size(599, 304);
             this.Controls.Add(this.tabControl1);
             this.Name = "fmSanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmSanPham";
             this.Load += new System.EventHandler(this.fmSanPham_Load);
             this.tabSanPham.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -482,20 +486,7 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabSanPham;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtDonGiaBan_cb;
-        private System.Windows.Forms.TextBox txtTensp_sp;
-        private System.Windows.Forms.TextBox txtMasp_sp;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListView lvSanPham;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbbTimsp;
-        private System.Windows.Forms.Button btnTimsp;
         private System.Windows.Forms.Button btnSuasp;
         private System.Windows.Forms.Button btnXoasp;
         private System.Windows.Forms.Button btnThemsp;
@@ -521,5 +512,18 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtDonGiaBan_sp;
+        private System.Windows.Forms.TextBox txtTensp_sp;
+        private System.Windows.Forms.TextBox txtMasp_sp;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListView lvSanPham;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDangBan;
+        private System.Windows.Forms.Button btnNgungBan;
     }
 }

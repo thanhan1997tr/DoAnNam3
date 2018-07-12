@@ -92,7 +92,9 @@ namespace BUS
                 items.SubItems.Add(l.SDiachi);
                 items.SubItems.Add(l.SDienthoai);
                 items.SubItems.Add(l.SLuong);
-                items.SubItems.Add(l.SQuyen);
+                items.SubItems.Add(l.SMaChucVu);
+                items.SubItems.Add(Convert.ToDateTime(l.SNgayvaolam).ToString("dd/MM/yyyy"));
+                items.SubItems.Add(l.SMaca);
                 lv.Items.Add(items);
             }
         }
@@ -129,7 +131,9 @@ namespace BUS
                     items.SubItems.Add(l.SDiachi);
                     items.SubItems.Add(l.SDienthoai);
                     items.SubItems.Add(l.SLuong);
-                    items.SubItems.Add(l.SQuyen);
+                    items.SubItems.Add(l.SMaChucVu);
+                    items.SubItems.Add(Convert.ToDateTime(l.SNgayvaolam).ToString("dd/MM/yyyy"));
+                    items.SubItems.Add(l.SMaca);
                     lv.Items.Add(items);
                 }
             }

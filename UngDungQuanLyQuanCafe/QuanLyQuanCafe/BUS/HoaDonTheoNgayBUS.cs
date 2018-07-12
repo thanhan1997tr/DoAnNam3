@@ -71,6 +71,23 @@ namespace BUS
             }
         }
 
+        public double loadGiaoCa(ListView lv, string MaCa)
+        {
+            lv.Items.Clear();
+            double tongtien = 0;
+            foreach (HoaDonTheoNgayDTO l in HoaDonTheoNgayDAO.Instance.LoadHoaDonGiaoCa(MaCa))
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = l.SMaHD;
+                item.SubItems.Add(Convert.ToDateTime(l.SNgayNhap).ToString("dd/MM/yyyy HH:mm:ss"));
+                item.SubItems.Add(Convert.ToDateTime(l.SNgayXuat).ToString("dd/MM/yyyy HH:mm:ss"));
+                item.SubItems.Add(l.FThanhToan.ToString());
+                lv.Items.Add(item);
+                tongtien += Convert.ToDouble(l.FThanhToan);
+            }
+            return tongtien;
+        }
+
         public string getMaHDMoi()
         {
             return "HD" + getDateTimeNow.getStringMa();

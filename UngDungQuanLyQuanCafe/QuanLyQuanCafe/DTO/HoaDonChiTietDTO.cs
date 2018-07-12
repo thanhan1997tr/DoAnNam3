@@ -14,8 +14,8 @@ namespace DTO
         private string sTenNhanVien;
         private string sDonGia;
 
-        public HoaDonChiTietDTO(String mahd, String ngaynhap, String ngayxuat, String manv, String maban, float giamgia, float vat, float thanhtoan, String ghichu, String masp, String tensp, String tennv, int soluong, String dongia)
-            : base(mahd, ngaynhap, ngayxuat, manv, maban, giamgia, vat, thanhtoan, ghichu)
+        public HoaDonChiTietDTO(String mahd, String ngaynhap, String ngayxuat, String manv, String maban, float giamgia, float vat, float thanhtoan, String ghichu, String masp, String tensp, String tennv, int soluong, String dongia, String maca)
+            : base(mahd, ngaynhap, ngayxuat, manv, maban, giamgia, vat, thanhtoan, ghichu, maca)
         {
             this.SMaSanPham = masp;
             this.STenSanPham = tensp;

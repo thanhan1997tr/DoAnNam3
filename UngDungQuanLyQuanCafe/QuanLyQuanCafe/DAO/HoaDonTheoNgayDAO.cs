@@ -38,13 +38,14 @@ namespace DAO
                 string maHD = items["MAHOADON"].ToString();
                 string ngaynhap = items["NGAYNHAP"].ToString();
                 string ngayxuat = items["NGAYXUAT"].ToString();
-                string maNVnhap = items["MANV"].ToString();
+                string maNVnhap = items["THUNGAN"].ToString();
                 string maban = items["MABAN"].ToString();
                 float giamgia = (float)Convert.ToDouble(items["GIAMGIA"]) * 100;
                 float vat = (float)Convert.ToDouble(items["VAT"]) * 100;
                 float thanhtoan = (float)Convert.ToDouble(items["THANHTOAN"]);
                 string ghichu = items["GHICHU"].ToString();
-                HoaDonTheoNgayDTO hdnew = new HoaDonTheoNgayDTO(maHD, ngaynhap, ngayxuat, maNVnhap, maban, giamgia, vat, thanhtoan, ghichu);
+                string maca = items["MACA"].ToString();
+                HoaDonTheoNgayDTO hdnew = new HoaDonTheoNgayDTO(maHD, ngaynhap, ngayxuat, maNVnhap, maban, giamgia, vat, thanhtoan, ghichu, maca);
                 hdlist.Add(hdnew);
 
             }
@@ -60,15 +61,39 @@ namespace DAO
                 string maHD = items["MAHOADON"].ToString();
                 string ngaynhap = items["NGAYNHAP"].ToString();
                 string ngayxuat = items["NGAYXUAT"].ToString();
-                string maNVnhap = items["MANV"].ToString();
+                string maNVnhap = items["THUNGAN"].ToString();
                 string maban = items["MABAN"].ToString();
                 float giamgia = (float)Convert.ToDouble(items["GIAMGIA"])*100;
                 float vat = (float)Convert.ToDouble(items["VAT"])*100;
                 float thanhtoan = (float)Convert.ToDouble(items["THANHTOAN"]);
                 string ghichu = items["GHICHU"].ToString();
-                HoaDonTheoNgayDTO hdnew = new HoaDonTheoNgayDTO(maHD, ngaynhap, ngayxuat, maNVnhap, maban, giamgia, vat, thanhtoan, ghichu);
+                string maca = items["MACA"].ToString();
+                HoaDonTheoNgayDTO hdnew = new HoaDonTheoNgayDTO(maHD, ngaynhap, ngayxuat, maNVnhap, maban, giamgia, vat, thanhtoan, ghichu, maca);
                 hdlist.Add(hdnew);
 
+            }
+            return hdlist;
+        }
+
+        public List<HoaDonTheoNgayDTO> LoadHoaDonGiaoCa(string MaCa)
+        {
+            List<HoaDonTheoNgayDTO> hdlist = new List<HoaDonTheoNgayDTO>();
+            string query = "SP_HOADON_GIAOCA @MACA";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { MaCa });
+            foreach (DataRow items in data.Rows)
+            {
+                string maHD = items["MAHOADON"].ToString();
+                string ngaynhap = items["NGAYNHAP"].ToString();
+                string ngayxuat = items["NGAYXUAT"].ToString();
+                string maNVnhap = items["THUNGAN"].ToString();
+                string maban = items["MABAN"].ToString();
+                float giamgia = (float)Convert.ToDouble(items["GIAMGIA"]) * 100;
+                float vat = (float)Convert.ToDouble(items["VAT"]) * 100;
+                float thanhtoan = (float)Convert.ToDouble(items["THANHTOAN"]);
+                string ghichu = items["GHICHU"].ToString();
+                string maca = items["MACA"].ToString();
+                HoaDonTheoNgayDTO hdnew = new HoaDonTheoNgayDTO(maHD, ngaynhap, ngayxuat, maNVnhap, maban, giamgia, vat, thanhtoan, ghichu, maca);
+                hdlist.Add(hdnew);
             }
             return hdlist;
         }
@@ -96,8 +121,8 @@ namespace DAO
         //Thêm hóa đơn
         public void ThemHoaDon(HoaDonTheoNgayDTO hd)
         {
-            string sql = "SP_THEMHOADON @MAHOADON , @MANV , @MABAN , @GIAMGIA , @VAT";
-            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { hd.SMaHD, hd.SMaNVNhap, hd.SMaBan, hd.FGiamGia, hd.FVAT });
+            string sql = "SP_THEMHOADON @MAHOADON , @MANV , @MABAN , @GIAMGIA , @VAT , @MACA";
+            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { hd.SMaHD, hd.SMaNVNhap, hd.SMaBan, hd.FGiamGia, hd.FVAT , hd.SMaCa});
         }
     }
 }

@@ -38,7 +38,7 @@ namespace DAO
                 tk = items["MANV"].ToString();
                 string ten = items["TENNV"].ToString();
                 string mk = items["MATKHAU"].ToString();
-                string q = items["QUYEN"].ToString();
+                string q = items["TENCHUCVU"].ToString();
                 taikhoan = new TaiKhoanDTO(tk, ten, mk, q);
             }
 
