@@ -33,9 +33,10 @@ namespace BUS
 
         private HoaDonTheoNgayBUS() { }
 
-        public void load(ListView lv)
+        public double load(ListView lv)
         {
             lv.Items.Clear();
+            double tongtien = 0;
             foreach (HoaDonTheoNgayDTO l in HoaDonTheoNgayDAO.Instance.LoadHoaDon())
             {
                 ListViewItem item = new ListViewItem();
@@ -49,12 +50,15 @@ namespace BUS
                 item.SubItems.Add(l.FThanhToan.ToString());
                 item.SubItems.Add(l.SGhiChu);
                 lv.Items.Add(item);
+                tongtien += Convert.ToDouble(l.FThanhToan);
             }
+            return tongtien;
         }
 
-        public void loadTheoNgay(ListView lv, string ngayBD, string ngayKT)
+        public double loadTheoNgay(ListView lv, string ngayBD, string ngayKT)
         {
             lv.Items.Clear();
+            double tongtien = 0;
             foreach (HoaDonTheoNgayDTO l in HoaDonTheoNgayDAO.Instance.LoadHoaDonTheoNgay(ngayBD, ngayKT))
             {
                 ListViewItem item = new ListViewItem();
@@ -68,14 +72,17 @@ namespace BUS
                 item.SubItems.Add(l.FThanhToan.ToString());
                 item.SubItems.Add(l.SGhiChu);
                 lv.Items.Add(item);
+                tongtien += Convert.ToDouble(l.FThanhToan);
             }
+            return tongtien;
         }
 
-        public double loadGiaoCa(ListView lv, string MaCa)
+        public double loadGiaoCa(ListView lv, string MaCa, string Ngay, Label lbl)
         {
             lv.Items.Clear();
             double tongtien = 0;
-            foreach (HoaDonTheoNgayDTO l in HoaDonTheoNgayDAO.Instance.LoadHoaDonGiaoCa(MaCa))
+            string tennv = "";
+            foreach (HoaDonTheoNgayDTO l in HoaDonTheoNgayDAO.Instance.LoadHoaDonGiaoCa(Ngay, MaCa))
             {
                 ListViewItem item = new ListViewItem();
                 item.Text = l.SMaHD;
@@ -84,7 +91,9 @@ namespace BUS
                 item.SubItems.Add(l.FThanhToan.ToString());
                 lv.Items.Add(item);
                 tongtien += Convert.ToDouble(l.FThanhToan);
+                tennv = l.SMaNVNhap;
             }
+            lbl.Text = tennv;
             return tongtien;
         }
 

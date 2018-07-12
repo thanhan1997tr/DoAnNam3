@@ -119,6 +119,12 @@
     <Compile Include="fmDoanhThu.Designer.cs">
       <DependentUpon>fmDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmTimGiaoCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmTimGiaoCa.Designer.cs">
+      <DependentUpon>fmTimGiaoCa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fmChamCong.resx">
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmDoanhThu.resx">
       <DependentUpon>fmDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmTimGiaoCa.resx">
+      <DependentUpon>fmTimGiaoCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

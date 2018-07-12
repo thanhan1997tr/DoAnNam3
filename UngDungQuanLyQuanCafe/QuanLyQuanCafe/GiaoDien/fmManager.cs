@@ -51,7 +51,6 @@ namespace GiaoDien
             }
             else if (chucvu.ToUpper().Equals("ADMIN"))
             {
-                
             }
             else
             {
@@ -251,6 +250,7 @@ namespace GiaoDien
             btnGopBan.Enabled = false;
             btnQuanLyBan.Enabled = false;
             btnGiaoCa.Enabled = false;
+            lblTongTien.Text = "";
         }
         public static class getCa
         {
@@ -276,6 +276,7 @@ namespace GiaoDien
             }
             else if (trangthai.ToUpper().Equals("TRUE")) //ca đã làm
             {
+                MessageBox.Show("Ca đã làm");
                 EnabledFalse();
             }
             else
@@ -357,12 +358,21 @@ namespace GiaoDien
                 else
                 {
                     CaDAO.Instance.CapNhatTrangThai(getCa.maca);
-                    fmGiaoCa fGc = new fmGiaoCa();
+                    string MaCa = getCa.maca;
+                    DateTime date = DateTime.Now;
+                    string Ngay = date.ToString("MM/dd/yyyy");
+                    fmGiaoCa fGc = new fmGiaoCa(Ngay, MaCa);
                     fGc.ShowDialog();
                     lblTongTien.Text = "";
                     EnabledFalse();
                 }
             }
+        }
+
+        private void xemGiaoCaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fmTimGiaoCa fm = new fmTimGiaoCa();
+            fm.Show();
         }
     }
 }

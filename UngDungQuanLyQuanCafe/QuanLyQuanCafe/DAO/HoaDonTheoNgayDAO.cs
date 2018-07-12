@@ -75,17 +75,17 @@ namespace DAO
             return hdlist;
         }
 
-        public List<HoaDonTheoNgayDTO> LoadHoaDonGiaoCa(string MaCa)
+        public List<HoaDonTheoNgayDTO> LoadHoaDonGiaoCa(string Ngay, string MaCa)
         {
             List<HoaDonTheoNgayDTO> hdlist = new List<HoaDonTheoNgayDTO>();
-            string query = "SP_HOADON_GIAOCA @MACA";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { MaCa });
+            string query = "SP_HOADON_GIAOCA @MACA , @NGAY";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { MaCa ,Ngay });
             foreach (DataRow items in data.Rows)
             {
                 string maHD = items["MAHOADON"].ToString();
                 string ngaynhap = items["NGAYNHAP"].ToString();
                 string ngayxuat = items["NGAYXUAT"].ToString();
-                string maNVnhap = items["THUNGAN"].ToString();
+                string maNVnhap = items["TENNV"].ToString();
                 string maban = items["MABAN"].ToString();
                 float giamgia = (float)Convert.ToDouble(items["GIAMGIA"]) * 100;
                 float vat = (float)Convert.ToDouble(items["VAT"]) * 100;

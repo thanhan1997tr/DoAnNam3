@@ -44,23 +44,31 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvXemHoaDon = new System.Windows.Forms.ListView();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblSoHoaDon = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnTimhd);
             this.panel1.Controls.Add(this.dtimeDenNgay_xhd);
             this.panel1.Controls.Add(this.dtimeTuNgay_xhd);
-            this.panel1.Location = new System.Drawing.Point(202, 3);
+            this.panel1.Controls.Add(this.btnLoad);
+            this.panel1.Location = new System.Drawing.Point(245, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 34);
+            this.panel1.Size = new System.Drawing.Size(562, 34);
             this.panel1.TabIndex = 6;
             // 
             // btnTimhd
             // 
             this.btnTimhd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTimhd.Location = new System.Drawing.Point(253, 3);
+            this.btnTimhd.Location = new System.Drawing.Point(362, 3);
             this.btnTimhd.Name = "btnTimhd";
             this.btnTimhd.Size = new System.Drawing.Size(81, 27);
             this.btnTimhd.TabIndex = 3;
@@ -73,7 +81,7 @@
             this.dtimeDenNgay_xhd.CustomFormat = "dd/MM/yyyy";
             this.dtimeDenNgay_xhd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtimeDenNgay_xhd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtimeDenNgay_xhd.Location = new System.Drawing.Point(449, 3);
+            this.dtimeDenNgay_xhd.Location = new System.Drawing.Point(195, 3);
             this.dtimeDenNgay_xhd.Name = "dtimeDenNgay_xhd";
             this.dtimeDenNgay_xhd.Size = new System.Drawing.Size(135, 26);
             this.dtimeDenNgay_xhd.TabIndex = 2;
@@ -91,7 +99,7 @@
             // btnLoad
             // 
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLoad.Location = new System.Drawing.Point(964, 7);
+            this.btnLoad.Location = new System.Drawing.Point(465, 4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 27);
             this.btnLoad.TabIndex = 8;
@@ -167,21 +175,88 @@
             this.lvXemHoaDon.View = System.Windows.Forms.View.Details;
             this.lvXemHoaDon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvXemHoaDon_MouseDoubleClick);
             // 
+            // lblTongTien
+            // 
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongTien.ForeColor = System.Drawing.Color.Red;
+            this.lblTongTien.Location = new System.Drawing.Point(890, 454);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(85, 21);
+            this.lblTongTien.TabIndex = 17;
+            this.lblTongTien.Text = "Tổng tiền:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(799, 454);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 21);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Tổng tiền:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1, 441);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 21);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Tổng số hóa đơn:";
+            // 
+            // lblSoHoaDon
+            // 
+            this.lblSoHoaDon.AutoSize = true;
+            this.lblSoHoaDon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoHoaDon.Location = new System.Drawing.Point(150, 441);
+            this.lblSoHoaDon.Name = "lblSoHoaDon";
+            this.lblSoHoaDon.Size = new System.Drawing.Size(101, 21);
+            this.lblSoHoaDon.TabIndex = 19;
+            this.lblSoHoaDon.Text = "Số hóa đơn:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(144, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 21);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "==>";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(2, 480);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(260, 15);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Double Click vào từng hóa đơn để xem chi tiết";
+            // 
             // fmHoaDonTheoNgay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(1042, 440);
+            this.ClientSize = new System.Drawing.Size(1042, 495);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblSoHoaDon);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTongTien);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvXemHoaDon);
-            this.Controls.Add(this.btnLoad);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fmHoaDonTheoNgay";
             this.Text = "Thống kê hóa đơn theo ngày";
-            this.Load += new System.EventHandler(this.fmHoaDonTheoNgay_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -202,5 +277,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ListView lvXemHoaDon;
+        private System.Windows.Forms.Label lblTongTien;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSoHoaDon;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

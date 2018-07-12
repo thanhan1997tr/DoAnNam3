@@ -66,9 +66,14 @@ namespace DAO
             double tong = 0;
             string sql = "SELECT SUM(THANHTOAN) AS TONGTIENCA FROM HOADON WHERE CAST(NGAYXUAT AS DATE) = CAST(GETDATE() AS DATE) AND  MACA = '" + maca + "'";
             DataTable rs = DataProvider.Instance.ExecuteQuery(sql);
+            
             foreach (DataRow items in rs.Rows)
             {
-                tong = Convert.ToDouble(items["TONGTIENCA"].ToString());
+                string s = items["TONGTIENCA"].ToString();
+                if (items["TONGTIENCA"].ToString() != "")
+                {
+                    tong = Convert.ToDouble(items["TONGTIENCA"].ToString());
+                }
             }
             return tong;
         }
