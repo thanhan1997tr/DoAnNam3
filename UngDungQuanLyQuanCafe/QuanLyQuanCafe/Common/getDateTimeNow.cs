@@ -12,6 +12,8 @@ namespace Common
         public static string getStringMa()
         {
             DateTime date = DateTime.Now;
+            string s = date.ToString("MM/dd/yyyy HH:mm:ss");
+            date = DateTime.ParseExact(s, "MM/dd/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
             string ngay = date.Day.ToString();
             string thang = date.Month.ToString();
             string nam = date.Year.ToString();

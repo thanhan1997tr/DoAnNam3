@@ -292,5 +292,10 @@ namespace GiaoDien
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NhanVienBUS.Instance.Load_ten(lvNhanVien, textBox1.Text);
+        }
     }
 }

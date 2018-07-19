@@ -20,10 +20,10 @@ namespace GiaoDien
         fmManager fmMa;
         public fmChiTietBan(fmManager f)
         {
-            fmMa = f;
+            fmMa = f; //Khi tắt form thì bên form fmManager cập nhật (cập nhật bàn trống hoặc có người khi thanh toán hoặc thêm món vào bàn mới
             InitializeComponent();
             LoadComboboxSanPham();
-            if (fmManager.getBan.sTrangThai.Equals("CÓ"))
+            if (fmManager.getBan.sTrangThai.Equals("CÓ")) //Lấy từ btn_Click bên form fmManager
             {
                 LoadHoaDonThanhToan();
             }
@@ -35,6 +35,8 @@ namespace GiaoDien
             cbbThemMon_Manager.ValueMember = "MASP";
             cbbThemMon_Manager.DataSource = SanPhamDAO.Instance.LoadComBoBoxSanPham();
         }
+
+        //Tính tổng tiền khi thay đổi Giảm giá và vat
         public void ShowTongTien()
         {
             float ShowTongTien = HoaDonThanhToanBUS.getTongTien.TongTien;
@@ -62,9 +64,10 @@ namespace GiaoDien
             }
         }
 
+        //Khi giảm giá thay đổi thì cập nhật vào csdl
         private void nbrGiamGia_ValueChanged(object sender, EventArgs e)
         {
-            string MaBan = fmManager.getBan.sMaBan;
+            string MaBan = fmManager.getBan.sMaBan; //Lấy từ btn_Click bên form fmManager
             string KtraMaHD = HoaDonTheoNgayDAO.Instance.getIDTheoHoaDon(MaBan);
             float GiamGia = ((float)nbrGiamGia.Value) / 100;
             float Vat = ((float)nbrVAT.Value) / 100;
@@ -89,35 +92,42 @@ namespace GiaoDien
         }
 
         #region THÊM BỚT MÓN
+        //Cập nhật form fmManager cách 2
         //public delegate void Update();
         //public Update UpdatefmManager;
+
+        //Thêm vào csdl rồi load lại từ csdl
         private void btnThemMon_Click(object sender, EventArgs e)
         {
+            //Trường hợp người dùng tự nhập bằng tay nếu nhập không có sp thì thông báo. Nếu đúng thì thực hiện thêm món
             if (SanPhamDAO.Instance.KiemTraTenSP(cbbThemMon_Manager.Text))
             {
                 string MaBan = fmManager.getBan.sMaBan;
-                int soluong = (int)nbrSoLuong_Manager.Value;
+                int soluong = (int)nbrSoLuong_Manager.Value; //Số lượng món
                 foreach (ListViewItem lvitem in lvHoaDon.Items)
                 {
+                    //Kiểm tra món chọn trên combobox có trong listview hay không. Nếu có thì cộng với số lượng trên listview
                     if (cbbThemMon_Manager.Text == lvitem.SubItems[0].Text)
                     {
                         soluong += Convert.ToInt32(lvitem.SubItems[1].Text);
                     }
                 }
-                string KtraMaHD = HoaDonTheoNgayDAO.Instance.getIDTheoHoaDon(MaBan);
+                string KtraMaHD = HoaDonTheoNgayDAO.Instance.getIDTheoHoaDon(MaBan); //Kiểm tra xem bàn hiện tại có hóa đơn hay chưa
                 if (KtraMaHD.Equals("NO")) //nếu chưa tồn tại hóa đơn thì tạo hóa đơn mới
                 {
-                    string MaHDNew = HoaDonTheoNgayBUS.Instance.getMaHDMoi();
-                    string MaNv = fmDangNhap.getTaiKhoan.taiKhoan;
+                    string MaHDNew = HoaDonTheoNgayBUS.Instance.getMaHDMoi(); //Tự động lấy mã theo //HD+ngày tháng năm giờ phút giây
+                    string MaNv = fmDangNhap.getTaiKhoan.taiKhoan; //Mã nhân viên đăng nhập hiện tại
                     float GiamGia = ((float)nbrGiamGia.Value) / 100;
                     float Vat = ((float)nbrVAT.Value) / 100;
                     string MaCa = fmManager.getCa.maca;
-                    if (soluong > 0)
+                    if (soluong > 0) //Khi thêm món số lượng phải > 0
                     {
                         HoaDonTheoNgayDTO hd = new HoaDonTheoNgayDTO(MaHDNew, "", "", MaNv, MaBan, GiamGia, Vat, 0, "", MaCa);
+                        //Thêm hóa đơn vào csdl
                         HoaDonTheoNgayDAO.Instance.ThemHoaDon(hd);
+                        //Thêm hóa đơn chi tiết vào csdl
                         HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(MaHDNew, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
-                        //Load lại danh sách sản phẩm trong hóa đơn
+                        //Load lại hóa đơn vừa mới thêm trong csdl ra form
                         HoaDonThanhToanBUS.Instance.LoadHoaDonMenu(lvHoaDon, MaBan, lbnhanvien, lbtime, txtTongTien, nbrGiamGia, nbrVAT);
                     }
                     else
@@ -131,16 +141,14 @@ namespace GiaoDien
                     {
                         //Nếu mã hóa đơn đã có và chưa thanh toán thì thêm món mới vào hóa đơn chi tiết của hóa đơn đó
                         HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(KtraMaHD, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
-                        //Load lại danh sách sản phẩm trong hóa đơn
+                        //Load lại hóa đơn vừa mới thêm trong csdl ra form
                         HoaDonThanhToanBUS.Instance.LoadHoaDonMenu(lvHoaDon, MaBan, lbnhanvien, lbtime, txtTongTien, nbrGiamGia, nbrVAT);
                     }
                     else
                     {
                         MessageBox.Show("Chưa nhập số lượng", "Thông báo");
                     }
-
                 }
-
             }
             else
             {
@@ -162,7 +170,7 @@ namespace GiaoDien
                     {
                         if (cbbThemMon_Manager.Text == lvitem.SubItems[0].Text)
                         {
-                            soluong = Convert.ToInt32(lvitem.SubItems[1].Text) - soluong;
+                            soluong = Convert.ToInt32(lvitem.SubItems[1].Text) - soluong; //Lấy số lượng đã có trừ số lượng muốn trừ nhập vào
                             ktrasp = true;
                             break;
                         }
@@ -175,6 +183,7 @@ namespace GiaoDien
                     {
                         if (ktrasp)
                         {
+                            //Cập nhật lại số lượng vào hdct. Nếu như số lượng = 0 thì đồng nghĩa với việc xóa món đó
                             HoaDonChiTietDAO.Instance.ThemHoaDonChiTiet(KtraMaHD, cbbThemMon_Manager.SelectedValue.ToString(), soluong);
                             HoaDonThanhToanBUS.Instance.LoadHoaDonMenu(lvHoaDon, MaBan, lbnhanvien, lbtime, txtTongTien, nbrGiamGia, nbrVAT);
                         }
@@ -197,32 +206,38 @@ namespace GiaoDien
         {
             string MaBan = fmManager.getBan.sMaBan;
             string KtraMaHD = HoaDonTheoNgayDAO.Instance.getIDTheoHoaDon(MaBan);
-            if (!KtraMaHD.Equals("NO"))
+            if (!KtraMaHD.Equals("NO")) //Nếu bàn này có người thì thanh toán (có hóa đơn)
             {
                 if (MessageBox.Show("Bạn có chắc thanh toán", "Thông Báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     float GiamGia = (float)Convert.ToDouble(nbrGiamGia.Value) / 100;
                     float Vat = (float)Convert.ToDouble(nbrVAT.Value) / 100;
                     float TongTien = HoaDonThanhToanBUS.getTongTien.TongTien - (HoaDonThanhToanBUS.getTongTien.TongTien * GiamGia) + (HoaDonThanhToanBUS.getTongTien.TongTien * Vat);
+                    //Tổng tiền
                     HoaDonThanhToanDAO.Instance.ThanhToan(KtraMaHD, TongTien, GiamGia, Vat);
+
+                    //Cập nhật tổng tiền ca đang làm việc bán được bao nhiêu
                     string MaCa = fmManager.getCa.maca;
                     fmMa.TongTienCa(MaCa);
+
+                    //Show form hóa đơn chi tiết để in hóa đơn
                     fmHoaDonChiTiet fm = new fmHoaDonChiTiet(KtraMaHD);
                     fm.Text = KtraMaHD;
                     fm.ShowDialog();
+
+                    //Reset form
                     lvHoaDon.Items.Clear();
-                    //HoaDonThanhToanBUS.Instance.LoadHoaDonMenu(lvHoaDon, MaBan, lbnhanvien, lbtime, txtTongTien, nbrGiamGia, nbrVAT);
                     nbrSoLuong_Manager.Value = 0;
                     nbrVAT.Value = 0;
                     nbrGiamGia.Value = 0;
                     lbnhanvien.Text = "";
                     lbtime.Text = "";
                     txtTongTien.Text = "";
-                    //LoadComboboxSanPham();
                 }
             }
         }
 
+        ////Khi tắt form thì bên form fmManager cập nhật (cập nhật bàn trống hoặc có người khi thanh toán hoặc thêm món vào bàn mới
         private void fmChiTietBan_FormClosing(object sender, FormClosingEventArgs e)
         {
             //UpdatefmManager();

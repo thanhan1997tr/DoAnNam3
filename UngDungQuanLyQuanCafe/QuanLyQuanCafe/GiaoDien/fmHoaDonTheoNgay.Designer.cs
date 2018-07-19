@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmHoaDonTheoNgay));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnTimhd = new System.Windows.Forms.Button();
             this.dtimeDenNgay_xhd = new System.Windows.Forms.DateTimePicker();
             this.dtimeTuNgay_xhd = new System.Windows.Forms.DateTimePicker();
@@ -48,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSoHoaDon = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(562, 34);
             this.panel1.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(144, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 21);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "==>";
             // 
             // btnTimhd
             // 
@@ -216,16 +226,6 @@
             this.lblSoHoaDon.TabIndex = 19;
             this.lblSoHoaDon.Text = "Số hóa đơn:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(144, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 21);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "==>";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -241,6 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.ClientSize = new System.Drawing.Size(1042, 495);
             this.Controls.Add(this.label4);
@@ -251,7 +252,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvXemHoaDon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "fmHoaDonTheoNgay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê hóa đơn theo ngày";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

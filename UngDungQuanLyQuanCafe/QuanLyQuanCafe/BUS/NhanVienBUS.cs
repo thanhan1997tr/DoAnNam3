@@ -28,6 +28,7 @@ namespace BUS
         }
         private NhanVienBUS() { }
 
+        //Tạo mã nhân viên mới
         public string getMaNvMoi()
         {
             string Manv = "000" + NhanVienDAO.Instance.getMaNv();
@@ -99,6 +100,25 @@ namespace BUS
             }
         }
 
+        public void Load_ten(ListView lv, string timten)
+        {
+            lv.Items.Clear();
+            foreach (NhanVienDTO l in NhanVienDAO.Instance.Load_Ten(timten))
+            {
+                ListViewItem items = new ListViewItem();
+                items.Text = l.SManv;
+                items.SubItems.Add(l.STennv);
+                items.SubItems.Add(Convert.ToDateTime(l.SNgaysinh).ToString("dd/MM/yyyy"));
+                items.SubItems.Add(l.SGioitinh);
+                items.SubItems.Add(l.SDiachi);
+                items.SubItems.Add(l.SDienthoai);
+                items.SubItems.Add(l.SLuong);
+                items.SubItems.Add(l.SMaChucVu);
+                items.SubItems.Add(Convert.ToDateTime(l.SNgayvaolam).ToString("dd/MM/yyyy"));
+                items.SubItems.Add(l.SMaca);
+                lv.Items.Add(items);
+            }
+        }
         public int ThemNhanVien(NhanVienDTO nv)
         {
             return NhanVienDAO.Instance.ThemNhanVien(nv);
@@ -118,10 +138,10 @@ namespace BUS
         public void TimNhanVien(ListView lv, string ten)
         {
             lv.Items.Clear();
-            List<NhanVienDTO> dsnv = NhanVienDAO.Instance.Load();
+            List<NhanVienDTO> dsnv = NhanVienDAO.Instance.Load(); //Lấy danh sách nhân viên hiện có thêm vào list
             foreach (NhanVienDTO l in dsnv)
             {
-                if (l.STennv.Equals(ten))
+                if (l.STennv.Equals(ten)) // Kiểm tra tên nhân viên muốn tìm có trong list hay không. Nếu có thì xuất ra
                 {
                     ListViewItem items = new ListViewItem();
                     items.Text = l.SManv;

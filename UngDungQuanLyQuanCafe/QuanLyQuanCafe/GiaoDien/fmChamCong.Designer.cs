@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmChamCong));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbbNam = new System.Windows.Forms.ComboBox();
-            this.cbbThang = new System.Windows.Forms.ComboBox();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnTim = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnTraLuong = new System.Windows.Forms.Button();
             this.MaChamCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TONGCONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +67,12 @@
             this.LUONGCOBAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbbNam = new System.Windows.Forms.ComboBox();
+            this.cbbThang = new System.Windows.Forms.ComboBox();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnTraLuong = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTongLuong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -130,64 +130,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(944, 334);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // cbbNam
-            // 
-            this.cbbNam.FormattingEnabled = true;
-            this.cbbNam.Location = new System.Drawing.Point(12, 12);
-            this.cbbNam.Name = "cbbNam";
-            this.cbbNam.Size = new System.Drawing.Size(76, 21);
-            this.cbbNam.TabIndex = 2;
-            this.cbbNam.SelectedIndexChanged += new System.EventHandler(this.cbbNam_SelectedIndexChanged);
-            // 
-            // cbbThang
-            // 
-            this.cbbThang.FormattingEnabled = true;
-            this.cbbThang.Location = new System.Drawing.Point(94, 12);
-            this.cbbThang.Name = "cbbThang";
-            this.cbbThang.Size = new System.Drawing.Size(105, 21);
-            this.cbbThang.TabIndex = 3;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(13, 85);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 4;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnTim
-            // 
-            this.btnTim.Location = new System.Drawing.Point(205, 85);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
-            this.btnTim.TabIndex = 6;
-            this.btnTim.Text = "Tìm";
-            this.btnTim.UseVisualStyleBackColor = true;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Enabled = false;
-            this.btnThem.Location = new System.Drawing.Point(205, 12);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 7;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnTraLuong
-            // 
-            this.btnTraLuong.Location = new System.Drawing.Point(94, 85);
-            this.btnTraLuong.Name = "btnTraLuong";
-            this.btnTraLuong.Size = new System.Drawing.Size(105, 23);
-            this.btnTraLuong.TabIndex = 8;
-            this.btnTraLuong.Text = "Trả Lương";
-            this.btnTraLuong.UseVisualStyleBackColor = true;
-            this.btnTraLuong.Click += new System.EventHandler(this.btnTraLuong_Click);
             // 
             // MaChamCong
             // 
@@ -550,6 +492,63 @@
             this.MaNv.ReadOnly = true;
             this.MaNv.Visible = false;
             // 
+            // cbbNam
+            // 
+            this.cbbNam.FormattingEnabled = true;
+            this.cbbNam.Location = new System.Drawing.Point(12, 12);
+            this.cbbNam.Name = "cbbNam";
+            this.cbbNam.Size = new System.Drawing.Size(76, 21);
+            this.cbbNam.TabIndex = 2;
+            this.cbbNam.SelectedIndexChanged += new System.EventHandler(this.cbbNam_SelectedIndexChanged);
+            // 
+            // cbbThang
+            // 
+            this.cbbThang.FormattingEnabled = true;
+            this.cbbThang.Location = new System.Drawing.Point(94, 12);
+            this.cbbThang.Name = "cbbThang";
+            this.cbbThang.Size = new System.Drawing.Size(105, 21);
+            this.cbbThang.TabIndex = 3;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(13, 85);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.TabIndex = 4;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(205, 85);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(75, 23);
+            this.btnTim.TabIndex = 6;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(205, 12);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnTraLuong
+            // 
+            this.btnTraLuong.Location = new System.Drawing.Point(94, 85);
+            this.btnTraLuong.Name = "btnTraLuong";
+            this.btnTraLuong.Size = new System.Drawing.Size(105, 23);
+            this.btnTraLuong.TabIndex = 8;
+            this.btnTraLuong.Text = "Trả Lương";
+            this.btnTraLuong.UseVisualStyleBackColor = true;
+            this.btnTraLuong.Click += new System.EventHandler(this.btnTraLuong_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -588,7 +587,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fmChamCong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chấm Công";
+            this.Text = "CHẤM CÔNG";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

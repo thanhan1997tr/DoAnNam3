@@ -34,8 +34,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fmTienNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmTienNhapHang.Designer.cs">
+      <DependentUpon>fmTienNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmChamCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +72,18 @@
     </Compile>
     <Compile Include="fmChiTietBan.Designer.cs">
       <DependentUpon>fmChiTietBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmNhaCungCap.Designer.cs">
+      <DependentUpon>fmNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmPhieuNhapChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmPhieuNhapChiTiet.Designer.cs">
+      <DependentUpon>fmPhieuNhapChiTiet.cs</DependentUpon>
     </Compile>
     <Compile Include="fmDangNhap.cs">
       <SubType>Form</SubType>
@@ -83,11 +109,23 @@
     <Compile Include="fmManager.Designer.cs">
       <DependentUpon>fmManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMatHang.Designer.cs">
+      <DependentUpon>fmMatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fmNhanVien.Designer.cs">
       <DependentUpon>fmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmPhieuNhap.Designer.cs">
+      <DependentUpon>fmPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="fmQuanLyBan.cs">
       <SubType>Form</SubType>
@@ -127,11 +165,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpGiaoCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpGiaoCa.Designer.cs">
+      <DependentUpon>rpGiaoCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpHoaDon.Designer.cs">
+      <DependentUpon>rpHoaDon.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fmTienNhapHang.resx">
+      <DependentUpon>fmTienNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmChamCong.resx">
       <DependentUpon>fmChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmChiTietBan.resx">
       <DependentUpon>fmChiTietBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmNhaCungCap.resx">
+      <DependentUpon>fmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmPhieuNhapChiTiet.resx">
+      <DependentUpon>fmPhieuNhapChiTiet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmDangNhap.resx">
       <DependentUpon>fmDangNhap.cs</DependentUpon>
@@ -145,8 +204,14 @@
     <EmbeddedResource Include="fmManager.resx">
       <DependentUpon>fmManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fmMatHang.resx">
+      <DependentUpon>fmMatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmNhanVien.resx">
       <DependentUpon>fmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmPhieuNhap.resx">
+      <DependentUpon>fmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmQuanLyBan.resx">
       <DependentUpon>fmQuanLyBan.cs</DependentUpon>
@@ -176,6 +241,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="rpGiaoCa.resx">
+      <DependentUpon>rpGiaoCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpHoaDon.resx">
+      <DependentUpon>rpHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -239,6 +323,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btnTable.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\survey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banknote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

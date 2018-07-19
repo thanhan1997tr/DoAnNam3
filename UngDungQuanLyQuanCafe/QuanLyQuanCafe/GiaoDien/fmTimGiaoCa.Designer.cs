@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmTimGiaoCa));
             this.label1 = new System.Windows.Forms.Label();
             this.dTimeNgay = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -87,14 +88,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.ClientSize = new System.Drawing.Size(394, 90);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.cbbCaLam);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dTimeNgay);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "fmTimGiaoCa";
-            this.Text = "fmTimGiaoCa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TÌM THÔNG TIN GIAO CA";
             this.ResumeLayout(false);
             this.PerformLayout();
 

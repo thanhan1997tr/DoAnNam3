@@ -77,11 +77,12 @@ namespace BUS
             return tongtien;
         }
 
-        public double loadGiaoCa(ListView lv, string MaCa, string Ngay, Label lbl)
+        public double loadGiaoCa(ListView lv, string MaCa, string Ngay, Label lbl, Label ca)
         {
             lv.Items.Clear();
             double tongtien = 0;
             string tennv = "";
+            string maca = "";
             foreach (HoaDonTheoNgayDTO l in HoaDonTheoNgayDAO.Instance.LoadHoaDonGiaoCa(Ngay, MaCa))
             {
                 ListViewItem item = new ListViewItem();
@@ -92,9 +93,23 @@ namespace BUS
                 lv.Items.Add(item);
                 tongtien += Convert.ToDouble(l.FThanhToan);
                 tennv = l.SMaNVNhap;
+                maca = l.SMaCa;
             }
             lbl.Text = tennv;
+            ca.Text = maca;
             return tongtien;
+        }
+        
+        public bool CheckBaoCao(string ca, string ngay)
+        {
+            if (CaDAO.Instance.BaoCaoGiaoCa(ca, ngay) == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public string getMaHDMoi()

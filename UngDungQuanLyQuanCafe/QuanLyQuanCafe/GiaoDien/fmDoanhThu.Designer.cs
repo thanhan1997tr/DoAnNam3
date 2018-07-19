@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmDoanhThu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnTra_dt = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnIn_dt = new System.Windows.Forms.Button();
             this.txtTongTien_dt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -164,16 +164,6 @@
             this.columnHeader5.Text = "Thành tiền";
             this.columnHeader5.Width = 128;
             // 
-            // btnIn_dt
-            // 
-            this.btnIn_dt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnIn_dt.Location = new System.Drawing.Point(473, 404);
-            this.btnIn_dt.Name = "btnIn_dt";
-            this.btnIn_dt.Size = new System.Drawing.Size(81, 24);
-            this.btnIn_dt.TabIndex = 10;
-            this.btnIn_dt.Text = "In";
-            this.btnIn_dt.UseVisualStyleBackColor = true;
-            // 
             // txtTongTien_dt
             // 
             this.txtTongTien_dt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -197,16 +187,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
             this.ClientSize = new System.Drawing.Size(615, 443);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lvDoanhThu);
-            this.Controls.Add(this.btnIn_dt);
             this.Controls.Add(this.txtTongTien_dt);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "fmDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDoanhThu";
+            this.Text = "DANH THU THEO SẢN PHẨM";
             this.Load += new System.EventHandler(this.frmDoanhThu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -230,7 +222,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Button btnIn_dt;
         private System.Windows.Forms.TextBox txtTongTien_dt;
         private System.Windows.Forms.Label label3;
     }

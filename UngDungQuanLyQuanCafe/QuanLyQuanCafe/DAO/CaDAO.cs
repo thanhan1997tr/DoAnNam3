@@ -71,5 +71,10 @@ namespace DAO
             DataTable rs = DataProvider.Instance.ExecuteQuery(sql);
             return rs.Rows.Count > 0;
         }
+        public int BaoCaoGiaoCa( string ca, string ngay)
+        {
+            string sql = "SELECT COUNT(*) FROM CHITIETCA WHERE CAST(NGAYLAMVIEC AS DATE) = '" + ngay + "' AND MACA = '" + ca + "' AND TRANGTHAI = '1'";
+            return (int)DataProvider.Instance.ExecuteScalar(sql);
+        }
     }
 }

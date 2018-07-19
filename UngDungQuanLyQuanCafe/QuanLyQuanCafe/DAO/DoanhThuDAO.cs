@@ -60,5 +60,17 @@ namespace DAO
             }
             return listDoanhThu;
         }
+
+        public DataTable LoadDoanhThuNhapHang()
+        {
+            string sql = "SP_DOANHTHU_NHAPHANG_DS";
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
+
+        public DataTable TimDoanhThuNhapHang(string ngayBD, string ngayKT)
+        {
+            string sql = "SP_DOANHTHU_NHAPHANG_TIM @TUNGAY , @DENNGAY";
+            return DataProvider.Instance.ExecuteQuery(sql, new object[] { ngayBD, ngayKT });
+        }
     }
 }

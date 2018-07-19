@@ -49,8 +49,11 @@
     <Compile Include="HoaDonChiTietDAO.cs" />
     <Compile Include="HoaDonThanhToanDAO.cs" />
     <Compile Include="HoaDonTheoNgayDAO.cs" />
+    <Compile Include="MatHangDAO.cs" />
     <Compile Include="NhaCungCapDAO.cs" />
     <Compile Include="NhanVienDAO.cs" />
+    <Compile Include="PhieuNhapChiTietDAO.cs" />
+    <Compile Include="PhieuNhapDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPhamDAO.cs" />
     <Compile Include="TableDAO.cs" />

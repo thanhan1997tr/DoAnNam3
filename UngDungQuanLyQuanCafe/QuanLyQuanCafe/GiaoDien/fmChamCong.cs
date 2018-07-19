@@ -20,20 +20,16 @@ namespace GiaoDien
             InitializeComponent();
             LoadCombobox();
             getQuyen();
-            DateTime date = DateTime.Now;
+            DateTime date = DateTime.Now; //Lấy ngày tháng hiện tại
             string thangN = date.Month.ToString();
             string namN = date.Year.ToString();
             LoadDS(thangN, namN);
             dataGridView1.Columns["TenNv"].ReadOnly = true;
             dataGridView1.Columns["TONGCONG"].ReadOnly = true;
             LoadNgay(thangN, namN);
-            if (ChamCongDAO.Instance.KiemTraTrungThang(thangN, namN) == 0)
-            {
-                btnThem.Enabled = true;
-            }
         }
 
-        public void getQuyen()
+        public void getQuyen() //Chỉ có admin và quản lý mới được sửa
         {
             fmThongTinTaiKhoan fm = new fmThongTinTaiKhoan();
             string chucvu = fm.getChucvu();
@@ -46,6 +42,8 @@ namespace GiaoDien
                 label1.Visible = false;
             }
         }
+
+        //Load bảng chấm công theo tháng, năm muốn load
         public void LoadDS(string thang, string nam)
         {
             
@@ -60,6 +58,9 @@ namespace GiaoDien
             DateTime date = DateTime.Now;
             string thangN = date.Month.ToString();
             string namN = date.Year.ToString();
+
+            //Kiểm trả nếu tháng, năm muốn tìm trùng với tháng, năm hiện tại thì cho phép sửa chấm công
+            //Còn không trùng thì chỉ cho phép xem
             if (thang.Equals(thangN) && nam.Equals(namN))
             {
                 dataGridView1.ReadOnly = false;
@@ -70,6 +71,7 @@ namespace GiaoDien
             }
         }
 
+        //Load combobox tháng, năm
         public void LoadCombobox()
         {
             cbbNam.DataSource = ChamCongDAO.Instance.LoadNam();
@@ -88,16 +90,20 @@ namespace GiaoDien
             cbbThang.DisplayMember = "THANG";
             cbbThang.ValueMember = "THANG";
         }
+
+        //Load N1->N31 tùy theo tháng, ví dụ tháng 2 có 28 ngày thì load bảng từ N1->N28
         public void LoadNgay(string t, string na)
         {
             int thang = Convert.ToInt32(t);
             int nam = Convert.ToInt32(na);
-            int songay = DateTime.DaysInMonth(nam, thang);
+            int songay = DateTime.DaysInMonth(nam, thang); //Lấy số ngày trong tháng
+            //Hiện từ N1->N28
             for (var i = 1; i <= songay; i++)
             {
                 var n = "N" + i;
                 dataGridView1.Columns[n].Visible = true;
             }
+            //Ẩn các N29->31
             for (var i = songay + 1; i <= 31; i++)
             {
                 var n = "N" + i;
@@ -105,6 +111,7 @@ namespace GiaoDien
             }
         }
 
+        //Duyệt từ nhân viên để tính tổng công của từng nhân viên
         public void TinhSoNgayCong()
         {
             string macong = "";
@@ -124,39 +131,16 @@ namespace GiaoDien
                 {
                     var n = "N" + j;
                     int ngay = Convert.ToInt32(dataGridView1.Rows[i].Cells[n].Value);
-                    //string tennv = dataGridView1.Rows[i].Cells["TenNv"].Value.ToString();
                     tong += ngay;
-                    //bool cell = Convert.ToBoolean(dataGridView1.Rows[index].Cells[i].Value);
-                    //try
-                    //{
-                    //    int ng = Convert.ToInt32(ngay);
-                    //    if (ng > 3 || ng < 0)
-                    //    {
-                    //        MessageBox.Show(tennv + "-> Ngày " + j + " nhập sai.");
-
-                    //    }
-                    //    else
-                    //    {
-                    //        tong += ngay;
-                    //    }
-                    //}
-                    //catch (Exception)
-                    //{
-                    //    MessageBox.Show(tennv + "-> Ngày " + j + " nhập sai.");
-                    //}
                 }
                 ChamCongDAO.Instance.UpdateTongCong(tong, manv, macong);
                 string nam = cbbNam.Text.ToString();
                 string thang = cbbThang.Text.ToString();
                 LoadDS(thang, nam);
-                //s += dem.ToString() + " - ";
-
             }
-
-            //MessageBox.Show(s);
-
         }
 
+        //Khi chọn combobox năm thì load combobox tháng với năm được chọn
         private void cbbNam_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbbThang.DataSource = ChamCongDAO.Instance.LoadThangTheoNam(cbbNam.Text);
@@ -164,9 +148,11 @@ namespace GiaoDien
             cbbThang.ValueMember = "THANG";
         }
 
+        //Duyệt qua từng nhân viên và lưu từng dòng trên dataGridView
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            //btnTim_Click(sender, e);
+            //Kiểm tra xem có nhập sai hay không
+            //Nếu không nhập sai thì đếm = 0 và gọi hàm tính tổng ngày công
             int dem = 0;
             string macong = "";
             try
@@ -183,7 +169,6 @@ namespace GiaoDien
                 for (var j = 1; j <= 31; j++)
                 {
                     var n = "N" + j;
-                    //bool cell = Convert.ToBoolean(dataGridView1.Rows[index].Cells[i].Value);
                     string ngay = dataGridView1.Rows[i].Cells[n].Value.ToString();
                     string tennv = dataGridView1.Rows[i].Cells["TenNv"].Value.ToString();
                     try
@@ -235,15 +220,28 @@ namespace GiaoDien
             DateTime date = DateTime.Now;
             string thang = date.Month.ToString();
             string nam = date.Year.ToString();
-            ChamCongDAO.Instance.ThemChamCong(thang, nam);
-            int t = Convert.ToInt32(thang);
-            int n = Convert.ToInt32(nam);
-            LoadNgay(thang, nam);
-            LoadDS(thang, nam);
-            LoadCombobox();
-            lblTongLuong.Text = "";
+            //Nếu không trùng trong csdl thì thêm bảng chấm công mới
+            if (ChamCongDAO.Instance.KiemTraTrungThang(thang, nam) == 0)
+            {
+                ChamCongDAO.Instance.ThemChamCong(thang, nam);
+                //int t = Convert.ToInt32(thang);
+                //int n = Convert.ToInt32(nam);
+                LoadNgay(thang, nam);
+                LoadDS(thang, nam);
+                LoadCombobox();
+                lblTongLuong.Text = "";
+                btnThem.Enabled = false;
+            }
+            else // Nếu trùng thì load bảng chấm công đó lên
+            {
+                LoadNgay(thang, nam);
+                LoadDS(thang, nam);
+            }
+            
         }
 
+        //Hiện cột lương phải trả và lương cơ bản
+        //Ẩn các cột ngày
         public void TraLuong()
         {
             dataGridView1.Columns["LUONGCOBAN"].Visible = true;

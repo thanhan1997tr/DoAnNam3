@@ -33,16 +33,24 @@ namespace GiaoDien
             {
                 txtMaHD.Text = l.SMaHD;
                 txtBan.Text = l.SMaBan;
-                txtGiamGia.Text = l.FGiamGia.ToString();
+                float giamgia = l.FGiamGia * 100;
+                float vat = l.FVAT * 100;
+                txtGiamGia.Text = giamgia.ToString();
                 txtNgayNhapHD.Text = Convert.ToDateTime(l.SNgayNhap).ToString("dd/MM/yyyy HH:mm:ss");
                 txtNgayXuatHD.Text = Convert.ToDateTime(l.SNgayXuat).ToString("dd/MM/yyyy HH:mm:ss");
                 txtNhanVienXuat.Text = l.STenNhanVien;
                 CultureInfo culture = new CultureInfo("vi-VN");
                 Thread.CurrentThread.CurrentCulture = culture;
                 txtTongTienHD.Text = l.FThanhToan.ToString("c", culture);
-                txtVAT.Text = l.FVAT.ToString();
+                txtVAT.Text = vat.ToString();
                 txtCaLam.Text = l.SMaCa;
             }
+        }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            rpHoaDon rp = new rpHoaDon(getMaHd.sMaHd);
+            rp.ShowDialog();
         }
     }
 }

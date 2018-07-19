@@ -89,3 +89,24 @@ C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDung
 C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmDoanhThu.resources
 H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmGiaoCa.resources
 H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmTimGiaoCa.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmMatHang.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmPhieuNhap.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmPhieuNhapChiTiet.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmNhaCungCap.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.rpHoaDon.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\RdlCompile.cache
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\RdlCompile.compiled
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.rpGiaoCa.resources
+H:\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmTienNhapHang.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmTienNhapHang.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmNhaCungCap.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmPhieuNhapChiTiet.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmGiaoCa.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmMatHang.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmPhieuNhap.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.fmTimGiaoCa.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.rpGiaoCa.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\GiaoDien.rpHoaDon.resources
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\RdlCompile.cache
+C:\Users\THUONG THUONG\OneDrive - ntu.edu.vn\HocTap\ThucTapNam3\DoAnNam3\UngDungQuanLyQuanCafe\QuanLyQuanCafe\GiaoDien\obj\Debug\RdlCompile.compiled

@@ -91,7 +91,7 @@ namespace DAO
                 float vat = (float)Convert.ToDouble(items["VAT"]) * 100;
                 float thanhtoan = (float)Convert.ToDouble(items["THANHTOAN"]);
                 string ghichu = items["GHICHU"].ToString();
-                string maca = items["MACA"].ToString();
+                string maca = items["TENCA"].ToString();
                 HoaDonTheoNgayDTO hdnew = new HoaDonTheoNgayDTO(maHD, ngaynhap, ngayxuat, maNVnhap, maban, giamgia, vat, thanhtoan, ghichu, maca);
                 hdlist.Add(hdnew);
             }

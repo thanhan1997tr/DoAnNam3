@@ -61,10 +61,10 @@ namespace DAO
             string sql = "SP_TABLE_XOA";
             return DataProvider.Instance.ExecuteNonQuery(sql);
         }
-        public void ChuyenBan(string tb1, string tb2, string mahoadon, string manv)
+        public void ChuyenBan(string tb1, string tb2, string mahoadon, string manv, string maca)
         {
-            string sql = "SP_CHUYENBAN @idTable1 , @idTable2 , @mahoadon , @manv";
-            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { tb1, tb2, mahoadon, manv });
+            string sql = "SP_CHUYENBAN @idTable1 , @idTable2 , @mahoadon , @manv , @maca";
+            DataProvider.Instance.ExecuteNonQuery(sql, new object[] { tb1, tb2, mahoadon, manv, maca });
         }
         public void GopBan(string tb1, string tb2)
         {

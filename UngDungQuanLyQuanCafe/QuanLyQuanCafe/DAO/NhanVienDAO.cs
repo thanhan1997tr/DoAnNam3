@@ -81,6 +81,29 @@ namespace DAO
             }
             return nv;
         }
+        public List<NhanVienDTO> Load_Ten(string timten)
+        {
+            List<NhanVienDTO> nv = new List<NhanVienDTO>();
+            string query = "NHANVIEN_TIM @TENNV";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { timten });
+            foreach (DataRow items in data.Rows)
+            {
+                string manv = items["MANV"].ToString();
+                string tennv = items["TENNV"].ToString();
+                string ngaysinh = items["NGAYSINH"].ToString();
+                string gioitinh = items["GIOITINH"].ToString();
+                string diachi = items["DIACHI"].ToString();
+                string dienthoai = items["DIENTHOAI"].ToString();
+                string matkhau = items["MATKHAU"].ToString();
+                string q = items["TENCHUCVU"].ToString();
+                string luong = items["LUONGCOBAN"].ToString();
+                string ngaylam = items["NGAYVAOLAM"].ToString();
+                string maca = items["TENCA"].ToString();
+                NhanVienDTO nvnew = new NhanVienDTO(manv, tennv, ngaysinh, gioitinh, diachi, dienthoai, matkhau, q, luong, ngaylam, maca);
+                nv.Add(nvnew);
+            }
+            return nv;
+        }
 
         public int ThemNhanVien(NhanVienDTO nv)
         {

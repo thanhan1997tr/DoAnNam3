@@ -65,6 +65,7 @@
             this.btnInHoaDon.TabIndex = 35;
             this.btnInHoaDon.Text = "In";
             this.btnInHoaDon.UseVisualStyleBackColor = true;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // txtTongTienHD
             // 

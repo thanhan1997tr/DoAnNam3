@@ -111,7 +111,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fmQuanLyBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fmQuanLyBan";
+            this.Text = "THÊM XÓA BÀN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fmQuanLyBan_FormClosing);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

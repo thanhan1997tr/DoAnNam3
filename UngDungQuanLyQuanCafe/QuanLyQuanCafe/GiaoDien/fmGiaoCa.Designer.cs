@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmGiaoCa));
             this.lblTongTien = new System.Windows.Forms.Label();
             this.lblCa = new System.Windows.Forms.Label();
             this.lblNgay = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnBaoCao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTongTien
@@ -161,12 +163,25 @@
             this.columnHeader4.Text = "Thành tiền";
             this.columnHeader4.Width = 113;
             // 
+            // btnBaoCao
+            // 
+            this.btnBaoCao.Enabled = false;
+            this.btnBaoCao.Location = new System.Drawing.Point(16, 391);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(75, 23);
+            this.btnBaoCao.TabIndex = 16;
+            this.btnBaoCao.Text = "Báo cáo";
+            this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+            // 
             // fmGiaoCa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(226)))));
-            this.ClientSize = new System.Drawing.Size(505, 449);
+            this.ClientSize = new System.Drawing.Size(499, 449);
+            this.Controls.Add(this.btnBaoCao);
             this.Controls.Add(this.lblTongTien);
             this.Controls.Add(this.lblCa);
             this.Controls.Add(this.lblNgay);
@@ -176,8 +191,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvGiaoCa);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "fmGiaoCa";
-            this.Text = "fmGiaoCa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "GIAO CA";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +216,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button btnBaoCao;
     }
 }
